@@ -1,24 +1,23 @@
 :host {
-  display: block;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 }
-header{
+header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    height: 150px;
+    height: 100px;
     background-color: rgb(81, 233, 182);
     padding-inline: calc((100% - 1440px) / 2);
     @media (max-width: 1440px) {
-    padding-inline: 1.5rem;
+        padding-inline: 1.5rem;
     }
 }
 
-.logo{
+.logo {
     margin-left: auto;
 }
-

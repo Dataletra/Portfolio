@@ -1,12 +1,16 @@
 // ========================================================
 // GLOBAL STYLES (src/styles.scss)
 // ========================================================
-*{
+* {
   position: relative;
 }
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox, Safari 18.2+, Chromium 121+ */
 }
 
 // Root wrapper enforces sticky footer flex column
@@ -32,13 +36,14 @@ app-core {
   width: 100%;
   box-sizing: border-box;
   padding-inline: calc((100% - 1440px) / 2);
-    @media (max-width: 1440px) {
+  @media (max-width: 1440px) {
     padding-inline: 1.5rem;
-    }
+  }
 }
 
 // Core inner components MUST be display block!
-app-landing, app-aboutme {
+app-landing,
+app-aboutme {
   display: block;
   width: 100%;
 }
