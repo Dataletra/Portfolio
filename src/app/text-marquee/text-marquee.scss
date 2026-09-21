@@ -1,0 +1,33 @@
+.marquee-text {
+  overflow: clip;
+}
+
+.marquee-text-track {
+  display: flex;
+  padding-left: 4.8rem;
+  gap: 2rem;
+  width: max-content;
+  animation: marquee-move-text var(--speed, 35s) linear infinite var(--direction, forwards);
+}
+
+.marquee-text p {
+  background-color: #14141400;
+  color: black;
+  padding: 0;
+  margin: 7px;
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* This wrapper div is only there so we know for sure we have enough text to fill the screen.
+   If we want to have this marquee loop on devices with a very large width, we simply need to add more text.*/
+.wrapper {
+  max-width: 100dvw;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #3e3e3e80;
+}

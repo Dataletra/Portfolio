@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     //Debug
     border: solid red 1px;
 
@@ -10,7 +10,7 @@
     width: 100%;
 }
 
-.socials{
+.socials {
     position: absolute;
     height: 20px;
     width: 250px;
@@ -22,12 +22,12 @@
     flex-direction: row;
     padding: 2px;
     gap: 5px;
-    a{
+    a {
         text-decoration: none;
     }
     align-items: center;
 }
-.go-down-line{
+.go-down-line {
     position: absolute;
     height: 20px;
     width: 150px;
@@ -39,7 +39,7 @@
     flex-direction: row;
     padding: 2px;
     gap: 5px;
-    a{
+    a {
         text-decoration: none;
     }
     align-items: center;
@@ -49,4 +49,14 @@ hr {
     border: none;
     border-top: 1px solid #383838;
     margin: 0;
+}
+app-text-marquee {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+
+    width: 100vw;
+    overflow: hidden;
+    z-index: 10;
 }
