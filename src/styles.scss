@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+// ========================================================
+// GLOBAL STYLES (src/styles.scss)
+// ========================================================
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+// Root wrapper enforces sticky footer flex column
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// Sticky Header always at the top
+app-header {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+// App core wrapper flexes to push footer down & applies content boundary
+app-core {
+  flex: 1 0 auto;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: calc((100% - 1440px) / 2);
+    @media (max-width: 1440px) {
+    padding-inline: 1.5rem;
+    }
+}
+
+// Core inner components MUST be display block!
+app-landing, app-aboutme {
+  display: block;
+  width: 100%;
+}
+
+app-footer {
+  flex-shrink: 0;
+  display: block;
+  width: 100%;
+}

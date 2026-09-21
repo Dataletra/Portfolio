@@ -1,0 +1,19 @@
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: auto;
+    height: 150px;
+    background-color: rgb(95, 191, 159);
+    padding-inline: calc((100% - 1440px) / 2);
+    @media (max-width: 1440px) {
+    padding-inline: 1.5rem;
+    }
+}
+.footer-left{
+
+}
+.links{
+    display: flex;
+    flex-direction: column;
+}
