@@ -10,17 +10,23 @@
     align-items: center;
     background-color: #1c1c1c;
 }
-
+.aboutMeImage {
+    height: 570px;
+    width: 570px;
+    border-radius: 28px;
+}
 .image-container {
-    height: 300px;
-    min-width: 300px;
+    height: 570px;
+    min-width: 570px;
     background-color: greenyellow;
 }
 .About-me-container {
-    height: 300px;
-    min-width: 300px;
-    max-width: 300px;
-    background-color: rgb(97, 158, 5);
+    height: 570px;
+    min-width: 570px;
+    max-width: 570px;
+    background-color: #1f2e2b;
+    border: 2px solid varia.$main-color;
+    border-radius: 28px;
 }
 .detail-text-container {
     display: flex;
