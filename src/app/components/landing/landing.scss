@@ -8,17 +8,17 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: calc(100dvh - 100px); //100px is header height
+    height: calc(100dvh); //100px is header height
     width: 100%;
-    background: #08463b;
-    background: linear-gradient(231deg, rgba(8, 70, 59, 1) 0%, rgba(0, 0, 0, 1) 100%);
     color: white;
 }
 h2 {
     font-weight: 300;
+    font-size: 32px;
     margin: 0;
-    margin-top: 100px;
+    margin-top: 18%;
 }
+
 h1 {
     font-weight: 600;
     font-size: 76px;
@@ -26,35 +26,79 @@ h1 {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
 button {
     border-radius: 28px;
     background-color: #08463b00;
     border: 2px solid varia.$main-color;
     color: white;
 }
+
+.btn-container {
+    gap: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.sub-name-btn {
+    border-radius: 28px;
+    padding: 10px;
+    background-color: #08463b00;
+    border: 1px solid white;
+    color: white;
+}
+
 .socials {
     position: absolute;
     height: 20px;
-    width: 250px;
-    // background-color: rgb(222, 200, 243);
-    right: -80px;
+    width: 600px;
+    right: -250px;
     bottom: 120px;
     transform: rotate(-90deg);
     display: flex;
     flex-direction: row;
     padding: 2px;
-    gap: 5px;
-    a {
-        text-decoration: none;
-    }
+    gap: 12px;
     align-items: center;
+    justify-content: center;
+    a,
+    a:after,
+    a:visited {
+        text-decoration: none;
+        color: white;
+    }
 }
+
+.social-link {
+    display: inline-block;
+    padding-right: 7px;
+    width: 24px;
+    height: 24px;
+    transform: rotate(90deg);
+
+    &.linkedin::before {
+        content: url("/assets/images/contact/Linkedin.svg");
+    }
+
+    &.linkedin:hover::before {
+        content: url("/assets/images/contact/LinkedinHover.svg");
+    }
+
+    &.github::before {
+        content: url("/assets/images/contact/Github.svg");
+    }
+
+    &.github:hover::before {
+        content: url("/assets/images/contact/GithubHover.svg");
+    }
+}
+
 .go-down-line {
     position: absolute;
     height: 20px;
-    width: 150px;
+    width: 450px;
     // background-color: rgb(222, 200, 243);
-    left: -30px;
+    left: -180px;
     bottom: 65px;
     transform: rotate(90deg);
     display: flex;
@@ -64,20 +108,22 @@ button {
     a {
         text-decoration: none;
     }
+    color: white;
     align-items: center;
 }
+
 hr {
     flex: 1;
     border: none;
     border-top: 1px solid white;
     margin: 0;
 }
+
 app-text-marquee {
     position: absolute;
-    top: 80%;
+    top: 89%;
     left: 50%;
-    transform: translateX(-50%) rotate(-3deg);
-
+    transform: translateX(-50%) rotate(-2.5deg);
     width: 100vw;
     overflow: hidden;
     z-index: 10;

@@ -12,8 +12,8 @@ header {
     justify-content: flex-start;
     align-items: center;
     height: 100px;
-    background: #1c1c1c;
-    background: linear-gradient(180deg, rgba(28, 28, 28, 1) 18%, rgba(0, 0, 0, 0) 100%);
+    background: #000000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.918) 18%, rgba(0, 0, 0, 0) 100%);
     padding-inline: calc((100% - 1440px) / 2);
     @media (max-width: 1440px) {
         padding-inline: 1.5rem;

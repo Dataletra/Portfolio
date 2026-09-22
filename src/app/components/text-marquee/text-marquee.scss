@@ -1,3 +1,5 @@
+@use "../../../../public/assets/abstract/variables.scss" as varia;
+
 .marquee-text {
   overflow: clip;
 }
@@ -12,9 +14,10 @@
 
 .marquee-text p {
   background-color: #14141400;
-  color: black;
-  padding: 0;
+  color: varia.$main-color;
+  padding: 5px;
   margin: 7px;
+  font-size: 20px;
 }
 
 @keyframes marquee-move-text {
@@ -30,4 +33,5 @@
   margin: 0 auto;
   color: #fff;
   background-color: #3e3e3e80;
+  backdrop-filter: blur(1.5px);
 }
