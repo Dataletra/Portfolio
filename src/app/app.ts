@@ -1,14 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Header } from './header/header';
-import { Footer } from './footer/footer';
-import { Core } from './core/core';
-import { TextMarquee } from './text-marquee/text-marquee';
-
+import { Header } from './components/header/header';
+import { Footer } from './components/footer/footer';
+import { Core } from './components/core/core';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, Core, TextMarquee],
+  imports: [RouterOutlet, Header, Footer, Core],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

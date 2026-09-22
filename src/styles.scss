@@ -1,6 +1,8 @@
 // ========================================================
 // GLOBAL STYLES (src/styles.scss)
 // ========================================================
+@use "../public/assets/styles/all_styles.scss" as all;
+
 * {
   position: relative;
 }
