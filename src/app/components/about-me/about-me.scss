@@ -1,3 +1,28 @@
-// .wrapper {
-//     height: 100px;
-// }
+@use "../../../../public/assets/abstract/variables.scss" as varia;
+
+.wrapper {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    background-color: #1c1c1c;
+}
+
+.image-container {
+    height: 300px;
+    min-width: 300px;
+    background-color: greenyellow;
+}
+.About-me-container {
+    height: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    background-color: rgb(97, 158, 5);
+}
+.detail-text-container {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,3 +1,4 @@
+@use "../../../../public/assets/abstract/variables.scss" as varia;
 :host {
     display: block;
     position: sticky;
@@ -11,13 +12,92 @@ header {
     justify-content: flex-start;
     align-items: center;
     height: 100px;
-    background-color: rgb(81, 233, 182);
+    background: #1c1c1c;
+    background: linear-gradient(180deg, rgba(28, 28, 28, 1) 18%, rgba(0, 0, 0, 0) 100%);
     padding-inline: calc((100% - 1440px) / 2);
     @media (max-width: 1440px) {
         padding-inline: 1.5rem;
     }
+    color: white;
+    gap: 20px;
 }
 
 .logo {
     margin-left: auto;
+}
+
+.switch {
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+}
+.switch__wrapper {
+    position: relative;
+    display: inline-block;
+    width: 85px;
+    height: 29px;
+    background: varia.$dark;
+    border: 2px solid varia.$main-color;
+    box-sizing: border-box;
+    border-radius: 28px;
+    margin: 0px 1em 0px 0px;
+}
+.switch__wrapper input {
+    display: none;
+}
+.switch__wrapper input:checked + .switch__slider:before {
+    transform: translateX(44px);
+}
+.switch__wrapper input:checked ~ div:after {
+    color: #ffffff;
+    transition: color 0.3s ease 0s;
+}
+.switch__wrapper input:checked ~ div:before {
+    color: #919191;
+    transition: color 0.3s ease 0s;
+}
+.switch div::before {
+    content: "EN";
+    position: relative;
+    z-index: 5;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+    bottom: -2px;
+    left: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease 0s;
+}
+.switch div::after {
+    content: "DE";
+    position: relative;
+    z-index: 5;
+    font-weight: 700;
+    font-size: 16px;
+    color: #919191;
+    bottom: -2px;
+    left: 32px;
+    cursor: pointer;
+    transition: color 0.3s ease 0s;
+}
+.switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+.switch__slider::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 28px;
+    left: -1px;
+    bottom: -1px;
+    background-color: varia.$main-color;
+    transition: all 0.4s ease 0s;
+    border-radius: 28px;
 }
