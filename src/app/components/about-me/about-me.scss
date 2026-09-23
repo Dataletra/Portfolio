@@ -19,19 +19,50 @@
     height: 570px;
     width: 570px;
     border-radius: 28px;
+    z-index: 5;
+    transition: 0.5s;
+    &:hover {
+        transform: translate(20px, -20px);
+        transition: 0.5s;
+    }
 }
+.aboutMeImage-background {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    z-index: 1;
+}
+
 .image-container {
     height: 570px;
     min-width: 570px;
-    background-color: greenyellow;
 }
+
+.biography-container {
+    margin-top: 150px;
+    .bio-label {
+        //replace with font Karla
+        color: varia.$main-color;
+        font-size: 24px;
+    }
+}
+
 .About-me-container {
-    height: 570px;
-    min-width: 570px;
-    max-width: 570px;
+    height: 560px;
+    min-width: 560px;
+    max-width: 560px;
     background-color: #1f2e2b;
     border: 2px solid varia.$main-color;
     border-radius: 28px;
+    padding: 10px;
+    padding-left: 20px;
+    color: white;
+    h1 {
+        margin: 0;
+
+        color: varia.$main-color;
+        font-size: 64px;
+    }
 }
 .detail-text-container {
     display: flex;
