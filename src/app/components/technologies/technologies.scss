@@ -1,25 +1,80 @@
+@use "../../../../public/assets/abstract/variables.scss" as varia;
+
 .wrapper {
+    padding-top: 150px;
     height: fit-content;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 20px;
-    align-items: center;
+    align-items: flex-start;
+    background-color: #1c1c1c;
+    box-sizing: border-box;
+    padding-inline: calc((100% - 1440px) / 2);
+    @media (max-width: 1440px) {
+        padding-inline: 1.5rem;
+    }
 }
-
-.image-container {
-    height: 300px;
-    min-width: 300px;
-    background-color: greenyellow;
-}
-.About-me-container {
-    height: 300px;
-    min-width: 300px;
-    max-width: 300px;
-    background-color: rgb(97, 158, 5);
-}
-.detail-text-container {
+.item-container {
+    height: fit-content;
+    width: 45%;
+    max-width: 550px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+
+    top: 77px;
+    gap: 30px 48px;
+}
+
+.item {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+}
+.topic-icon {
+    height: 70px;
+}
+.topic-text {
+    text-align: center;
+    color: white;
+    margin: 8px 0 0 0;
+}
+.biography-container {
+    .bio-label {
+        //replace with font Karla
+        color: varia.$main-color;
+        font-size: 24px;
+    }
+}
+.About-me-container {
+    height: 560px;
+    min-width: 560px;
+    max-width: 560px;
+    background-color: #1f2e2b;
+    border: 2px solid varia.$main-color;
+    border-radius: 28px;
+    padding: 10px;
+    padding-left: 20px;
+    color: white;
+    h1 {
+        margin: 0;
+        color: varia.$main-color;
+        font-size: 64px;
+    }
+}
+
+.main-color {
+    color: varia.$main-color;
+}
+
+button {
+    border-radius: 28px;
+    background-color: #08463b00;
+    border: 2px solid white;
+    color: white;
+    padding: 15px;
 }
