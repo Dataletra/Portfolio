@@ -3,7 +3,6 @@
 .wrapper {
     //Debug
     // border: solid red 1px;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -11,6 +10,11 @@
     height: calc(100dvh); //100px is header height
     width: 100%;
     color: white;
+    box-sizing: border-box;
+    padding-inline: calc((100% - 1440px) / 2);
+    @media (max-width: 1440px) {
+        padding-inline: 1.5rem;
+    }
 }
 h2 {
     font-weight: 300;
@@ -67,6 +71,10 @@ button {
         text-decoration: none;
         color: white;
     }
+    @media (min-width: 1440px) {
+        right: auto;
+        left: calc(50% + 720px - 400px);
+    }
 }
 
 .social-link {
@@ -110,6 +118,10 @@ button {
     }
     color: white;
     align-items: center;
+    @media (min-width: 1440px) {
+        left: auto;
+        right: calc(50% + 720px - 320px);
+    }
 }
 
 hr {

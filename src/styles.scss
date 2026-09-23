@@ -41,15 +41,11 @@ app-core {
   top: -100px;
   width: 100%;
   box-sizing: border-box;
-  padding-inline: calc((100% - 1440px) / 2);
-  @media (max-width: 1440px) {
-    padding-inline: 1.5rem;
-  }
 }
 
 // Core inner components MUST be display block!
 app-landing,
-app-aboutme {
+app-about-me {
   display: block;
   width: 100%;
 }

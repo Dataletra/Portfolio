@@ -9,6 +9,11 @@
     gap: 20px;
     align-items: center;
     background-color: #1c1c1c;
+    box-sizing: border-box;
+    padding-inline: calc((100% - 1440px) / 2);
+    @media (max-width: 1440px) {
+        padding-inline: 1.5rem;
+    }
 }
 .aboutMeImage {
     height: 570px;

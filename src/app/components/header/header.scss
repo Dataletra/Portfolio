@@ -46,7 +46,7 @@ header {
     display: none;
 }
 .switch__wrapper input:checked + .switch__slider:before {
-    transform: translateX(44px);
+    transform: translateX(43px);
 }
 .switch__wrapper input:checked ~ div:after {
     color: #ffffff;
