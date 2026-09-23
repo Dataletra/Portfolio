@@ -1,0 +1,59 @@
+@use "../../../../public/assets/abstract/variables.scss" as varia;
+
+.wrapper {
+    padding-top: 150px;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    background-color: #1c1c1c;
+    box-sizing: border-box;
+    padding-inline: calc((100% - 1440px) / 2);
+    @media (max-width: 1440px) {
+        padding-inline: 1.5rem;
+    }
+}
+.description-label {
+    color: white;
+}
+.featured-projects-container {
+    width: 100%;
+    .label {
+        //replace with font Karla
+        color: varia.$main-color;
+        font-size: 24px;
+    }
+    h1 {
+        color: varia.$main-color;
+    }
+}
+.project-container {
+    height: fit-content;
+    max-width: 70%;
+    color: white;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid varia.$main-color;
+    border-bottom: 1px solid varia.$main-color;
+    padding: 15px;
+    &first {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-top: 1px solid varia.$main-color;
+        padding: 15px;
+    }
+    &last {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid varia.$main-color;
+        padding: 15px;
+    }
+}
