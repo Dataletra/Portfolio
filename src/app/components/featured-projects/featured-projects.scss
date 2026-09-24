@@ -14,14 +14,16 @@
     @media (max-width: 1440px) {
         padding-inline: 1.5rem;
     }
+    padding-bottom: 200px;
 }
+
 .description-label {
     color: white;
 }
+
 .featured-projects-container {
     width: 100%;
     .label {
-        //replace with font Karla
         color: varia.$main-color;
         font-size: 24px;
     }
@@ -29,31 +31,82 @@
         color: varia.$main-color;
     }
 }
+
 .project-container {
     height: fit-content;
-    max-width: 70%;
+    max-width: 60%;
     color: white;
 }
 
-.project-item {
+%project-row-base {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    transition: 0.5s ease;
+
+    &:hover {
+        background-color: #1f2e2b;
+        transition: 0.5s ease;
+        .project-item-picture {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.project-item {
+    @extend %project-row-base;
     border-top: 1px solid varia.$main-color;
     border-bottom: 1px solid varia.$main-color;
-    padding: 15px;
+
     &first {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @extend %project-row-base;
         border-top: 1px solid varia.$main-color;
-        padding: 15px;
     }
+
     &last {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @extend %project-row-base;
         border-bottom: 1px solid varia.$main-color;
-        padding: 15px;
+    }
+}
+
+.project-skills {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.project-item-picture {
+    position: absolute;
+    right: -450px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 350px;
+    height: 200px;
+    overflow: hidden;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+
+    img {
+        border-radius: 28px;
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+    }
+
+    .project-item-picture-background {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: -1;
+        transform: scaleY(-1);
     }
 }
