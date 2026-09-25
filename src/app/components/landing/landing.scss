@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: calc(100dvh); //100px is header height
+    height: calc(100dvh - 100px); //100px is header height
     width: 100%;
     color: white;
     box-sizing: border-box;
@@ -133,7 +133,7 @@ hr {
 
 app-text-marquee {
     position: absolute;
-    top: 89%;
+    top: 90%;
     left: 50%;
     transform: translateX(-50%) rotate(-2.5deg);
     width: 100vw;
