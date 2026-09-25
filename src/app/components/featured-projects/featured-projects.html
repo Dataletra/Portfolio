@@ -8,7 +8,6 @@
     </p>
 
     <div class="project-container">
-      <!-- Project Item 1 -->
       <div class="project-item" (click)="openProjectModal(0)">
         <h3>Join</h3>
         <p class="project-skills">
@@ -22,7 +21,6 @@
         </div>
       </div>
 
-      <!-- Project Item 2 -->
       <div class="project-itemlast" (click)="openProjectModal(1)">
         <h3>El Pollo Loco</h3>
         <p class="project-skills">
@@ -37,11 +35,9 @@
   </div>
 </div>
 
-<!-- PROJECT MODAL DIALOG -->
 @if (currentProject; as project) {
   <div class="modal-backdrop" (click)="closeModal()">
     <div class="modal-dialog" (click)="$event.stopPropagation()">
-      <!-- LEFT SIDE -->
       <div class="modal-left">
         <span class="project-number">{{ project.number }}</span>
         <h2>{{ project.title }}</h2>
@@ -70,14 +66,11 @@
         </div>
       </div>
 
-      <!-- RIGHT SIDE -->
       <div class="modal-right">
         <button class="close-btn" (click)="closeModal()">&times;</button>
-
         <div class="project-preview-image">
           <img [src]="project.imageUrl" [alt]="project.title" />
         </div>
-
         <button class="next-btn" (click)="nextProject()">Next project -></button>
       </div>
     </div>

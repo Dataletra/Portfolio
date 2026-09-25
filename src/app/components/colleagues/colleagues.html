@@ -1,1 +1,59 @@
-<p>colleagues works!</p>
+<div class="colleagues">
+  <div class="colleagues-content">
+    <h2 class="heading">What my colleagues say about me</h2>
+
+    <div class="carousel">
+      <div class="carousel-stage">
+        @for (review of reviews; track $index; let i = $index) {
+          <article
+            class="review-card"
+            [class.review-card-active]="positionOf(i) === 'active'"
+            [class.review-card-prev]="positionOf(i) === 'prev'"
+            [class.review-card-next]="positionOf(i) === 'next'"
+            (click)="goTo(i)"
+          >
+            <p class="review-card-quote">{{ review.quote }}</p>
+            <div class="review-card-author-container">
+              <hr />
+              <p class="review-card-author">{{ review.name }} {{ review.role }}</p>
+            </div>
+            @if (positionOf(i) === 'prev') {
+              <div class="fade-left"></div>
+            }
+            @if (positionOf(i) === 'next') {
+              <div class="fade-right"></div>
+            }
+          </article>
+        }
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-arrow" (click)="prev()">
+          <img
+            class="carousel-arrow-left"
+            src="/assets/images/arrow_forward.svg"
+            alt="forward_arrow"
+          />
+        </button>
+
+        <div class="carousel-dots">
+          @for (review of reviews; track $index; let i = $index) {
+            <button
+              class="carousel-dot"
+              [class.carousel-dot--active]="i === activeIndex"
+              (click)="goTo(i)"
+            ></button>
+          }
+        </div>
+
+        <button class="carousel-arrow" (click)="next()">
+          <img
+            class="carousel-arrow-right"
+            src="/assets/images/arrow_forward.svg"
+            alt="forward_arrow"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
