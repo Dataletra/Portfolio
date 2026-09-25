@@ -59,3 +59,7 @@ app-footer {
 .main-color {
   color: all.$main-color;
 }
+
+.forward-arrow {
+  transform: rotate(-45deg) scale(0.8);
+}
