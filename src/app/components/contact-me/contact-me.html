@@ -1,27 +1,32 @@
 <div class="wrapper">
   <div class="left">
-    <p>Contact me</p>
-    <h1>Let's work together</h1>
+    <p><span class="main-color">Contact me</span></p>
+    <h1><span class="main-color">Let's work together</span></h1>
     <h3>Got a problem to solve?</h3>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sint magni quibusdam quam
       architecto nemo! Dolores quas dicta nostrum odio!
     </p>
-    <p>Need a Frontend developer? Let's talk!</p>
+    <p>Need a Frontend developer? <span class="main-color">Let's talk!</span></p>
   </div>
   <div class="right">
     <form [formGroup]="contactform">
       <div class="contact-item-first">
         <h3>What's your name?</h3>
-        <input id="name" type="text" formControlName="name" />
+        <input id="name" type="text" formControlName="name" placeholder="Your name goes here" />
       </div>
       <div class="contact-item">
         <h3>What's your email?</h3>
-        <input id="email" type="text" formControlName="email" />
+        <input id="email" type="text" formControlName="email" placeholder="youremail@email.com" />
       </div>
       <div class="contact-item-last">
         <h3>How can I help you?</h3>
-        <input id="message" type="text" formControlName="message" />
+        <input
+          id="message"
+          type="text"
+          formControlName="message"
+          placeholder="Hello Data, I am interested in..."
+        />
       </div>
     </form>
   </div>

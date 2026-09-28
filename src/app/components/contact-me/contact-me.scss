@@ -16,10 +16,12 @@
     @media (max-width: 900px) {
         flex-direction: column;
     }
+    padding-bottom: 50px;
 }
 
 p {
     margin: 0;
+    color: white;
 }
 
 h3 {
@@ -37,16 +39,26 @@ h3 {
         max-width: 100%;
     }
 }
-
+input {
+    width: 80%;
+    background-color: #1c1c1c;
+    border: none;
+    margin-bottom: 15px;
+    color: white;
+}
 .contact-item {
+    //edit coloring when polishing, have center be a bit darker, outers be main color
+    padding: 15px;
     border-top: 1px solid varia.$main-color;
     border-bottom: 1px solid varia.$main-color;
 
     &-first {
-        border-top: 1px solid varia.$main-color;
+        border-top: 2px solid varia.$main-color;
+        padding: 15px;
     }
 
     &-last {
-        border-bottom: 1px solid varia.$main-color;
+        border-bottom: 2px solid varia.$main-color;
+        padding: 15px;
     }
 }
