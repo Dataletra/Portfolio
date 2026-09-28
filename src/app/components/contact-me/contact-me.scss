@@ -1,7 +1,52 @@
+@use "../../../../public/assets/abstract/variables.scss" as varia;
+
 .wrapper {
     width: 100%;
+    box-sizing: border-box;
     background-color: #1c1c1c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    padding-inline: calc((100% - 1440px) / 2);
+    @media (max-width: 1440px) {
+        padding-inline: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
 }
+
 p {
     margin: 0;
+}
+
+h3 {
+    color: varia.$main-color;
+}
+
+.left,
+.right {
+    flex: 1;
+    width: 50%;
+    box-sizing: border-box;
+
+    @media (max-width: 900px) {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.contact-item {
+    border-top: 1px solid varia.$main-color;
+    border-bottom: 1px solid varia.$main-color;
+
+    &-first {
+        border-top: 1px solid varia.$main-color;
+    }
+
+    &-last {
+        border-bottom: 1px solid varia.$main-color;
+    }
 }

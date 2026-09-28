@@ -1,3 +1,28 @@
 <div class="wrapper">
-  <p>contact-me works!</p>
+  <div class="left">
+    <p>Contact me</p>
+    <h1>Let's work together</h1>
+    <h3>Got a problem to solve?</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sint magni quibusdam quam
+      architecto nemo! Dolores quas dicta nostrum odio!
+    </p>
+    <p>Need a Frontend developer? Let's talk!</p>
+  </div>
+  <div class="right">
+    <form [formGroup]="contactform">
+      <div class="contact-item-first">
+        <h3>What's your name?</h3>
+        <input id="name" type="text" formControlName="name" />
+      </div>
+      <div class="contact-item">
+        <h3>What's your email?</h3>
+        <input id="email" type="text" formControlName="email" />
+      </div>
+      <div class="contact-item-last">
+        <h3>How can I help you?</h3>
+        <input id="message" type="text" formControlName="message" />
+      </div>
+    </form>
+  </div>
 </div>
