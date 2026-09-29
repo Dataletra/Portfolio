@@ -27,7 +27,21 @@ export class ContactMe {
       return Regex.test(control.value.trim()) ? null : { invalidEmail: { value: control.value } };
     };
   }
+  formReset(FormControl: string) {
+    const form = this.contactform.get(FormControl);
+    form?.markAsUntouched();
+  }
+
+  //helper getters
   get email() {
     return this.contactform.get("email")
   }
+  get name() {
+    return this.contactform.get("name")
+  }
+  get message() {
+    return this.contactform.get("message")
+  }
+
+
 }

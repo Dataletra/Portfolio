@@ -17,6 +17,10 @@
       </div>
       <div class="contact-item">
         <h3>What's your email?</h3>
+        @if (!email?.valid && email?.touched) {
+          email.disable();
+          <span (click)="formReset('email')" class="error-msg">Invalid Email</span>
+        }
         <input id="email" type="text" formControlName="email" placeholder="youremail@email.com" />
       </div>
       <div class="contact-item-last">
