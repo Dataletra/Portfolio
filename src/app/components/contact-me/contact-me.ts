@@ -27,7 +27,6 @@ export class ContactMe {
       return Regex.test(control.value.trim()) ? null : { invalidEmail: { value: control.value } };
     };
   }
-
   get email() {
     return this.contactform.get("email")
   }

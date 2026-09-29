@@ -28,8 +28,7 @@ h3 {
     color: varia.$main-color;
 }
 
-.left,
-.right {
+.left {
     flex: 1;
     width: 50%;
     box-sizing: border-box;
@@ -39,6 +38,20 @@ h3 {
         max-width: 100%;
     }
 }
+
+.right {
+    flex: 1;
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 900px) {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 input {
     width: 80%;
     background-color: #1c1c1c;
@@ -53,12 +66,95 @@ input {
     border-bottom: 1px solid varia.$main-color;
 
     &-first {
-        border-top: 2px solid varia.$main-color;
+        border-top: 1px solid varia.$main-color;
         padding: 15px;
     }
 
     &-last {
-        border-bottom: 2px solid varia.$main-color;
+        border-bottom: 1px solid varia.$main-color;
         padding: 15px;
+    }
+}
+
+.checkbox-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+    cursor: pointer;
+    p {
+        margin: 0;
+        margin-top: 4px;
+        color: white;
+        font-size: 14px;
+        line-height: 1.4;
+        a {
+            color: varia.$main-color;
+            text-decoration: underline;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.checkbox-privacy-policy {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border: 3px solid varia.$main-color;
+    border-radius: 2px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    display: grid;
+    place-content: center;
+
+    &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em varia.$main-color;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    }
+
+    &:checked {
+        border-color: varia.$main-color;
+        background-color: rgba(varia.$main-color, 0.1);
+        &::before {
+            transform: scale(1);
+        }
+    }
+    &:hover {
+        border-color: rgb(85, 255, 215);
+    }
+
+    &:focus-visible {
+        outline: 2px solid white;
+        outline-offset: 2px;
+    }
+}
+
+button {
+    border-radius: 28px;
+    background-color: #08463b00;
+    border: 2px solid white;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 30px;
+    align-self: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        border-color: varia.$main-color;
+        color: varia.$main-color;
     }
 }
