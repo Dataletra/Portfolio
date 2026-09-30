@@ -21,7 +21,7 @@
           (input)="resetTouchedOnInput('name')"
         />
         @if (!name?.valid && name?.touched) {
-          <span class="error-msg">Invalid name</span>
+          <span class="error-msg">{{ nameError }}</span>
         }
       </div>
       <div class="contact-item">
@@ -47,7 +47,7 @@
           (input)="resetTouchedOnInput('message')"
         />
         @if (!message?.valid && message?.touched) {
-          <span class="error-msg">Invalid message</span>
+          <span class="error-msg">{{ messageError }}</span>
         }
       </div>
     </form>
