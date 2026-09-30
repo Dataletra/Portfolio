@@ -26,12 +26,40 @@ header {
     margin-left: auto;
 }
 
+a {
+    top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    p {
+        margin: 0;
+    }
+    &:hover {
+        .fancyDot {
+            opacity: 1;
+        }
+    }
+}
+
+.fancyDot {
+    color: varia.$main-color;
+    opacity: 0;
+    font-size: 30px;
+    line-height: 0.5;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
 .switch {
     display: flex;
     justify-content: center;
     padding-top: 0px;
 }
 .switch__wrapper {
+    cursor: pointer;
     position: relative;
     display: inline-block;
     width: 85px;

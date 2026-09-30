@@ -31,9 +31,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-button {
-}
-
 .go-down-button {
     border-radius: 28px;
     background-color: #08463b00;
@@ -155,9 +152,9 @@ hr {
 
 app-text-marquee {
     position: absolute;
-    top: 87%;
+    top: 89%;
     left: 50%;
-    transform: translateX(-50%) rotate(-2.5deg);
+    transform: translateX(-50%) rotate(-1.8deg);
     width: 100vw;
     overflow: hidden;
     z-index: 10;
