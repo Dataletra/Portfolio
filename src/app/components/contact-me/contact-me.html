@@ -13,15 +13,29 @@
     <form [formGroup]="contactform">
       <div class="contact-item-first">
         <h3>What's your name?</h3>
-        <input id="name" type="text" formControlName="name" placeholder="Your name goes here" />
+        <input
+          id="name"
+          type="text"
+          formControlName="name"
+          placeholder="Your name goes here"
+          (input)="resetTouchedOnInput('name')"
+        />
+        @if (!name?.valid && name?.touched) {
+          <span class="error-msg">Invalid name</span>
+        }
       </div>
       <div class="contact-item">
         <h3>What's your email?</h3>
+        <input
+          id="email"
+          type="text"
+          formControlName="email"
+          placeholder="youremail@email.com"
+          (input)="resetTouchedOnInput('email')"
+        />
         @if (!email?.valid && email?.touched) {
-          email.disable();
-          <span (click)="formReset('email')" class="error-msg">Invalid Email</span>
+          <span class="error-msg">{{ emailError }}</span>
         }
-        <input id="email" type="text" formControlName="email" placeholder="youremail@email.com" />
       </div>
       <div class="contact-item-last">
         <h3>How can I help you?</h3>
@@ -30,7 +44,11 @@
           type="text"
           formControlName="message"
           placeholder="Hello Data, I am interested in..."
+          (input)="resetTouchedOnInput('message')"
         />
+        @if (!message?.valid && message?.touched) {
+          <span class="error-msg">Invalid message</span>
+        }
       </div>
     </form>
     <div class="checkbox-container">

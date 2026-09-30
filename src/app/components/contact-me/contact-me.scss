@@ -56,23 +56,25 @@ input {
     width: 80%;
     background-color: #1c1c1c;
     border: none;
-    margin-bottom: 15px;
     color: white;
 }
 .contact-item {
     //edit coloring when polishing, have center be a bit darker, outers be main color
     padding: 15px;
+    height: 110px;
     border-top: 1px solid varia.$main-color;
     border-bottom: 1px solid varia.$main-color;
 
     &-first {
         border-top: 1px solid varia.$main-color;
         padding: 15px;
+        height: 110px;
     }
 
     &-last {
         border-bottom: 1px solid varia.$main-color;
         padding: 15px;
+        height: 110px;
     }
 }
 
@@ -159,11 +161,9 @@ button {
     }
 }
 .error-msg {
+    height: 15px;
     z-index: 888;
-    position: absolute;
-    bottom: 30px;
     background-color: #1c1c1c;
-    width: 100%;
     display: block;
     color: #ff6b6b;
     font-size: 12px;
