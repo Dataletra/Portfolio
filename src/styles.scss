@@ -35,7 +35,9 @@ app-header {
 }
 
 // App core wrapper flexes to push footer down & applies content boundary
-app-core {
+app-core,
+app-privacy-policy,
+app-legal-notice {
   flex: 1 0 auto;
   display: block;
   // top: -100px;

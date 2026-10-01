@@ -5,10 +5,11 @@ import { FeaturedProjects } from '../featured-projects/featured-projects';
 import { Colleagues } from '../colleagues/colleagues';
 import { ContactMe } from '../contact-me/contact-me';
 import { Technologies } from '../technologies/technologies';
+import { Header } from '../header/header';
 
 @Component({
   selector: 'app-core',
-  imports: [Landing, AboutMe, Technologies, FeaturedProjects, Colleagues, ContactMe],
+  imports: [Landing, AboutMe, Technologies, FeaturedProjects, Colleagues, ContactMe, Header],
   templateUrl: './core.html',
   styleUrl: './core.scss',
 })
