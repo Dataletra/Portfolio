@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, ReactiveFormsModule, Validators, FormGroup, ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
+import { FormControl, ReactiveFormsModule, Validators, FormGroup, ValidatorFn, AbstractControl, ValidationErrors, FormSubmittedEvent } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-me',
@@ -35,6 +35,12 @@ export class ContactMe {
         this.minWordsValidator(3)
       ]
     }),
+    policy: new FormControl('', {
+      validators: [
+        Validators.required,
+        Validators.requiredTrue,
+      ]
+    })
   });
 
   emailEndsWithLettersValidator(): ValidatorFn {
@@ -137,5 +143,10 @@ export class ContactMe {
     if (control && control.touched) {
       control.markAsUntouched();
     }
+  }
+
+  onSubmit() {
+    console.warn(this.contactform.value);
+
   }
 }

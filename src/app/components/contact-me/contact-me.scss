@@ -159,6 +159,11 @@ button {
         border-color: varia.$main-color;
         color: varia.$main-color;
     }
+
+    &:disabled {
+        border: 2px solid gray;
+        color: gray;
+    }
 }
 .error-msg {
     height: 15px;

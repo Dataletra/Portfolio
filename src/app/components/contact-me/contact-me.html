@@ -10,7 +10,7 @@
     <p>Need a Frontend developer? <span class="main-color">Let's talk!</span></p>
   </div>
   <div class="right">
-    <form [formGroup]="contactform">
+    <form [formGroup]="contactform" (ngSubmit)="onSubmit()">
       <div class="contact-item-first">
         <h3>What's your name?</h3>
         <input
@@ -50,11 +50,13 @@
           <span class="error-msg">{{ messageError }}</span>
         }
       </div>
+      <div class="checkbox-container">
+        <input formControlName="policy" type="checkbox" class="checkbox-privacy-policy" />
+        <p>
+          I've read the <a>privacy policy</a> and agree to the processing of my data as outlined
+        </p>
+      </div>
+      <button type="submit" [disabled]="!contactform.valid">Say Hello ;)</button>
     </form>
-    <div class="checkbox-container">
-      <input type="checkbox" class="checkbox-privacy-policy" />
-      <p>I've read the <a>privacy policy</a> and agree to the processing of my data as outlined</p>
-    </div>
-    <button>Say Hello ;)</button>
   </div>
 </div>
