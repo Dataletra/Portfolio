@@ -16,6 +16,7 @@ body {
   scrollbar-width: none; /* Firefox, Safari 18.2+, Chromium 121+ */
   background: #08463b;
   background: linear-gradient(231deg, rgba(8, 70, 59, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  scroll-behavior: smooth;
 }
 
 // Root wrapper enforces sticky footer flex column
