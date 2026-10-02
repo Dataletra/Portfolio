@@ -11,6 +11,14 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        },"@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
         }
       },
       "root": "",
@@ -20,6 +28,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "baseHref": "/angular-projects/portfolio/",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",

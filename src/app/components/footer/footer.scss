@@ -1,19 +1,32 @@
-footer{
+footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: auto;
     height: 150px;
-    background-color: rgb(95, 191, 159);
+    background-color: #1c1c1c;
     padding-inline: calc((100% - 1440px) / 2);
     @media (max-width: 1440px) {
-    padding-inline: 1.5rem;
+        padding-inline: 1.5rem;
     }
+    color: white;
 }
-.footer-left{
-
-}
-.links{
+.links {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    &::after {
+        text-decoration: none;
+        color: white;
+    }
 }
