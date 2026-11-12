@@ -175,6 +175,36 @@ a {
     }
 }
 
+.logo-container {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    cursor: pointer;
+    margin-left: auto;
+
+    .logo {
+        width: 100%;
+        display: block;
+        transition: opacity 0.2s ease;
+
+        &.hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        .logo.default {
+            opacity: 0;
+        }
+        .logo.hover {
+            opacity: 1;
+        }
+    }
+}
+
 @media (max-width: 700px) {
     .logo {
         order: 1;
