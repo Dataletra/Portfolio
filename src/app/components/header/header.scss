@@ -7,19 +7,44 @@
     width: 100%;
 }
 header {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     height: 100px;
-    background: #000000;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.918) 18%, rgba(0, 0, 0, 0) 100%);
     padding-inline: calc((100% - 1440px) / 2);
     @media (max-width: 1440px) {
         padding-inline: 1.5rem;
     }
     color: white;
     gap: 20px;
+    z-index: 1000;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.918) 18%, rgba(0, 0, 0, 0) 100%);
+        transition: opacity 0.4s ease;
+        z-index: -1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.918) 30%, rgba(0, 0, 0, 0) 100%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: -1;
+    }
+
+    &.scrolled {
+        &::after {
+            opacity: 1;
+        }
+    }
 }
 
 .logo {

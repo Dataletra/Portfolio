@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, NgZone, OnDestroy, OnInit, signal } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,10 +7,28 @@ import { Router } from '@angular/router';
     templateUrl: './header.html',
     styleUrl: './header.scss',
 })
-export class Header {
+export class Header implements OnInit, OnDestroy {
     private router = inject(Router);
-
+    private ngZone = inject(NgZone);
     menuOpen = false;
+    isScrolledPast100Dvh = signal(false);
+
+    private readonly onScroll = () => {
+        const currentScroll = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        this.isScrolledPast100Dvh.set(currentScroll >= window.innerHeight);
+    };
+
+    ngOnInit() {
+        this.ngZone.runOutsideAngular(() => {
+            document.addEventListener('scroll', this.onScroll, { passive: true, capture: true });
+        });
+
+        this.onScroll();
+    }
+
+    ngOnDestroy() {
+        document.removeEventListener('scroll', this.onScroll, { capture: true });
+    }
 
     toggleMenu() {
         this.menuOpen = !this.menuOpen;
