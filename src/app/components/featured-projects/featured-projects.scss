@@ -145,12 +145,7 @@
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
     color: #ffffff;
-
-    @media (max-width: 900px) {
-        flex-direction: column-reverse;
-        max-height: 90vh;
-        overflow-y: auto;
-    }
+    scrollbar-width: none;
 }
 
 /* Left Side */
@@ -299,6 +294,22 @@
 
     .project-item-picture {
         display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .modal-dialog {
+        flex-direction: column-reverse;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    .modal-right {
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+    .modal-left {
+        padding-top: 10px;
+        padding-bottom: 30px;
     }
 }
 
