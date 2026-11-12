@@ -1,78 +1,76 @@
 <div class="wrapper" id="scroll-featured-projects">
-  <div class="featured-projects-container">
-    <p class="label">Portfolio</p>
-    <h1>Featured Projects</h1>
-    <p class="description-label">
-      Explore a selection of my work here - interact with <br />
-      my projects to see my skills in action.
-    </p>
-
-    <div class="project-container">
-      <div class="project-item" (click)="openProjectModal(0)">
-        <h3>Join</h3>
-        <p class="project-skills">
-          Angular <span class="main-color">|</span> TypeScript
-          <span class="main-color">|</span> HTML <span class="main-color">|</span> CSS
-          <span class="main-color">|</span> Firebase
+    <div class="featured-projects-container">
+        <p class="label">Portfolio</p>
+        <h1>Featured Projects</h1>
+        <p class="description-label">
+            Explore a selection of my work here - interact with <br />
+            my projects to see my skills in action.
         </p>
-        <div class="project-item-picture">
-          <img class="project-item-picture-background" src="/assets/images/Capa_1.svg" alt="" />
-          <img src="/assets/images/Join.png" alt="Join Project" />
-        </div>
-      </div>
 
-      <div class="project-itemlast" (click)="openProjectModal(1)">
-        <h3>El Pollo Loco</h3>
-        <p class="project-skills">
-          HTML <span class="main-color">|</span> CSS <span class="main-color">|</span> JavaScript
-        </p>
-        <div class="project-item-picture">
-          <img src="/assets/images/ElPolloLoco.png" alt="El Pollo Loco Project" />
-          <img class="project-item-picture-background" src="/assets/images/Capa_1.svg" alt="" />
+        <div class="project-container">
+            <div class="project-item" (click)="openProjectModal(0)">
+                <h3>Join</h3>
+                <p class="project-skills">
+                    Angular <span class="main-color">|</span> TypeScript <span class="main-color">|</span> HTML
+                    <span class="main-color">|</span> CSS <span class="main-color">|</span> Firebase
+                </p>
+                <div class="project-item-picture">
+                    <img class="project-item-picture-background" src="/assets/images/Capa_1.svg" alt="" />
+                    <img src="/assets/images/Join.png" alt="Join Project" />
+                </div>
+            </div>
+
+            <div class="project-itemlast" (click)="openProjectModal(1)">
+                <h3>El Pollo Loco</h3>
+                <p class="project-skills">
+                    HTML <span class="main-color">|</span> CSS <span class="main-color">|</span> JavaScript
+                </p>
+                <div class="project-item-picture">
+                    <img src="/assets/images/ElPolloLoco.png" alt="El Pollo Loco Project" />
+                    <img class="project-item-picture-background" src="/assets/images/Capa_1.svg" alt="" />
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
 @if (currentProject; as project) {
-  <div class="modal-backdrop" (click)="closeModal()">
-    <div class="modal-dialog" (click)="$event.stopPropagation()">
-      <div class="modal-left">
-        <span class="project-number">{{ project.number }}</span>
-        <h2>{{ project.title }}</h2>
+    <div class="modal-backdrop" (click)="closeModal()">
+        <div class="modal-dialog" (click)="$event.stopPropagation()">
+            <div class="modal-left">
+                <span class="project-number">{{ project.number }}</span>
+                <h2>{{ project.title }}</h2>
 
-        <h4>What is this project about?</h4>
-        <p class="project-description">{{ project.description }}</p>
+                <h4>What is this project about?</h4>
+                <p class="project-description">{{ project.description }}</p>
 
-        <div class="tech-stack">
-          @for (tech of project.technologies; track tech.name) {
-            <div class="tech-item">
-              <img [src]="tech.icon" [alt]="tech.name" class="tech-icon" />
-              <span>{{ tech.name }}</span>
+                <div class="tech-stack">
+                    @for (tech of project.technologies; track tech.name) {
+                        <div class="tech-item">
+                            <img [src]="tech.icon" [alt]="tech.name" class="tech-icon" />
+                            <span>{{ tech.name }}</span>
+                        </div>
+                    }
+                </div>
+
+                <div class="modal-actions">
+                    <a [href]="project.githubUrl" target="_blank" rel="noopener" class="btn"
+                        >GitHub <img class="forward-arrow" src="/assets/images/arrow_forward.svg" alt="forward_arrow"
+                    /></a>
+                    <a [href]="project.liveUrl" target="_blank" rel="noopener" class="btn"
+                        >Live Test
+                        <img class="forward-arrow" src="/assets/images/arrow_forward.svg" alt="forward_arrow"
+                    /></a>
+                </div>
             </div>
-          }
-        </div>
 
-        <div class="modal-actions">
-          <a [href]="project.githubUrl" target="_blank" rel="noopener" class="btn"
-            >GitHub
-            <img class="forward-arrow" src="/assets/images/arrow_forward.svg" alt="forward_arrow"
-          /></a>
-          <a [href]="project.liveUrl" target="_blank" rel="noopener" class="btn"
-            >Live Test
-            <img class="forward-arrow" src="/assets/images/arrow_forward.svg" alt="forward_arrow"
-          /></a>
+            <div class="modal-right">
+                <button class="close-btn" (click)="closeModal()">&times;</button>
+                <div class="project-preview-image">
+                    <img [src]="project.imageUrl" [alt]="project.title" />
+                </div>
+                <button class="next-btn" (click)="nextProject()">Next project -></button>
+            </div>
         </div>
-      </div>
-
-      <div class="modal-right">
-        <button class="close-btn" (click)="closeModal()">&times;</button>
-        <div class="project-preview-image">
-          <img [src]="project.imageUrl" [alt]="project.title" />
-        </div>
-        <button class="next-btn" (click)="nextProject()">Next project -></button>
-      </div>
     </div>
-  </div>
 }
