@@ -1,21 +1,24 @@
 <div class="landing">
-  <div class="wrapper">
-    <h2>Frontend Developer</h2>
-    <h1>Ron Ellrich</h1>
-    <div class="btn-container">
-      <button class="sub-name-btn" (click)="scrollToFeaturedProjects()">Check my work</button
-      ><button class="sub-name-btn" (click)="scrollToContactMe()">Contact Me</button>
+    <div class="wrapper">
+        <h2>Frontend Developer</h2>
+        <h1>Ron Ellrich</h1>
+        <div class="btn-container">
+            <button class="sub-name-btn" (click)="scrollToFeaturedProjects()">Check my work</button
+            ><button class="sub-name-btn" (click)="scrollToContactMe()">Contact Me</button>
+        </div>
     </div>
-  </div>
-  <div class="go-down-line">
-    <button class="go-down-button" (click)="scrollToAboutMe()"><p>-></p></button>
-    <hr />
-  </div>
-  <div class="socials">
-    <hr />
-    <a href="#" class="social-link linkedin"></a>
-    <a href="#" class="social-link github"></a>
-    <a href="mailto:name@example.com">dataletra@gmail.com</a>
-  </div>
+    <div class="go-down-line">
+        <button class="go-down-button" (click)="scrollToAboutMe()"><p>-></p></button>
+        <hr />
+    </div>
+    <div class="socials">
+        <hr class="socials-go-down-line" />
+        <a href="#" class="social-link linkedin"></a>
+        <a href="#" class="social-link github"></a>
+        <a href="mailto:name@example.com" class="email-link" aria-label="Email">
+            <span class="email-text">dataletra@gmail.com</span>
+            <span class="social-link mail"></span>
+        </a>
+    </div>
 </div>
 <app-text-marquee></app-text-marquee>

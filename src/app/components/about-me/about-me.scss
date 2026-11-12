@@ -1,4 +1,4 @@
-@use "../../../../public/assets/abstract/variables.scss" as varia;
+@use '../../../../public/assets/abstract/variables.scss' as varia;
 
 .wrapper {
     height: fit-content;
@@ -66,4 +66,76 @@
 .detail-text-container {
     display: flex;
     flex-direction: row;
+}
+
+@media (max-width: 1240px) {
+    .wrapper {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 32px;
+        padding-block: 40px;
+        overflow-x: clip;
+    }
+
+    .image-container {
+        position: relative;
+        height: auto;
+        min-width: 0;
+        width: min(570px, 100%);
+    }
+
+    .aboutMeImage {
+        display: block;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .aboutMeImage-background {
+        z-index: 1;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .biography-container {
+        margin-top: 0;
+        width: 100%;
+        max-width: 560px;
+    }
+
+    .About-me-container {
+        height: auto;
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .About-me-container {
+        padding: 16px;
+
+        h1 {
+            font-size: clamp(40px, 11vw, 64px);
+        }
+    }
+
+    .detail-text-container {
+        align-items: center;
+        gap: 12px;
+    }
+
+    .topic-icon {
+        flex-shrink: 0;
+    }
+
+    .topic-text {
+        margin: 8px 0;
+        overflow-wrap: anywhere;
+    }
 }

@@ -1,4 +1,4 @@
-@use "../../../../public/assets/abstract/variables.scss" as varia;
+@use '../../../../public/assets/abstract/variables.scss' as varia;
 
 .wrapper {
     width: 100%;
@@ -118,7 +118,7 @@ input {
     place-content: center;
 
     &::before {
-        content: "";
+        content: '';
         width: 10px;
         height: 10px;
         transform: scale(0);
@@ -173,4 +173,38 @@ button {
     color: #ff6b6b;
     font-size: 12px;
     margin-top: 4px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .wrapper {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: clamp(28px, 9vw, 32px);
+        overflow-wrap: anywhere;
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-item h3,
+    .contact-item-first h3,
+    .contact-item-last h3 {
+        font-size: 17px;
+    }
+
+    .error-msg {
+        font-size: 11px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 320px;
+    }
 }

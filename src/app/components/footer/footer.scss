@@ -30,3 +30,30 @@ a {
         color: white;
     }
 }
+
+@media (max-width: 700px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        height: auto;
+        padding-block: 32px;
+        text-align: center;
+    }
+
+    .footer-left p {
+        margin: 2px 0;
+    }
+
+    .name {
+        margin: 0;
+    }
+
+    .links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 20px;
+    }
+}

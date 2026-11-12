@@ -1,4 +1,4 @@
-@use "../../../../public/assets/abstract/variables.scss" as varia;
+@use '../../../../public/assets/abstract/variables.scss' as varia;
 
 .wrapper {
     padding-top: 50px;
@@ -77,6 +77,7 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -211,6 +212,7 @@
 
     .modal-actions {
         display: flex;
+        flex-wrap: wrap;
         gap: 15px;
 
         .btn {
@@ -286,6 +288,75 @@
 
         &:hover {
             transform: translateX(5px);
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .project-container {
+        max-width: 100%;
+    }
+
+    .project-item-picture {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .description-label br {
+        display: none;
+    }
+
+    .project-item,
+    .project-itemlast {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+
+        h3 {
+            margin: 0.5rem 0 0;
+        }
+    }
+
+    .project-skills {
+        justify-content: flex-start;
+        margin: 0.5rem 0;
+        gap: 6px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal-backdrop {
+        padding: 12px;
+    }
+
+    .modal-dialog {
+        min-height: 0;
+        max-height: 92vh;
+    }
+
+    .modal-left {
+        padding: 24px;
+
+        .project-number {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        .tech-stack .tech-item {
+            padding: 4px 8px;
+        }
+    }
+
+    .modal-right {
+        padding: 16px 24px 0;
+
+        .project-preview-image {
+            height: 200px;
+            margin: 8px 0 16px;
         }
     }
 }

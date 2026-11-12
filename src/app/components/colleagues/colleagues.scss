@@ -1,4 +1,4 @@
-@use "../../../../public/assets/abstract/variables.scss" as varia;
+@use '../../../../public/assets/abstract/variables.scss' as varia;
 
 .colleagues {
     width: 100%;
@@ -119,6 +119,8 @@
     line-height: 1.5;
     text-align: left;
     flex: 1;
+    min-height: 0;
+    overflow-wrap: anywhere;
 }
 
 .review-card-author-container {
@@ -206,21 +208,52 @@
     }
 }
 
+/* ---------- Responsive ---------- */
 @media (max-width: 700px) {
+    .colleagues-content {
+        padding-block: 3.5rem;
+    }
+
+    .heading {
+        font-size: 24px;
+        margin-bottom: 2rem;
+        padding-inline: 1.5rem;
+    }
+
     .carousel-stage {
-        height: 320px;
+        height: 340px;
     }
 
     .review-card {
         width: min(300px, 85vw);
+        height: 300px;
         padding: 1.5rem;
 
         &-prev {
-            transform: translate(calc(-50% - 100% - 12px), -50%);
+            transform: translate(calc(-50% - 100% + 6px), -50%) scale(0.9);
         }
 
         &-next {
-            transform: translate(calc(-50% + 100% + 12px), -50%);
+            transform: translate(calc(-50% + 100% - 6px), -50%) scale(0.9);
         }
+    }
+
+    .review-card-quote {
+        font-size: 15px;
+        overflow: hidden;
+    }
+
+    .review-card-author {
+        white-space: normal;
+        text-align: right;
+        font-size: 13px;
+    }
+
+    .carousel-controls {
+        gap: 16px;
+    }
+
+    .carousel-dots {
+        gap: 14px;
     }
 }

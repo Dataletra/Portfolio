@@ -1,8 +1,6 @@
-@use "../../../../public/assets/abstract/variables.scss" as varia;
+@use '../../../../public/assets/abstract/variables.scss' as varia;
 
 .wrapper {
-    //Debug
-    // border: solid red 1px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -104,19 +102,36 @@ h1 {
     transform: rotate(90deg);
 
     &.linkedin::before {
-        content: url("/assets/images/contact/Linkedin.svg");
+        content: url('/assets/images/contact/Linkedin.svg');
     }
 
     &.linkedin:hover::before {
-        content: url("/assets/images/contact/LinkedinHover.svg");
+        content: url('/assets/images/contact/LinkedinHover.svg');
     }
 
     &.github::before {
-        content: url("/assets/images/contact/Github.svg");
+        content: url('/assets/images/contact/Github.svg');
     }
 
     &.github:hover::before {
-        content: url("/assets/images/contact/GithubHover.svg");
+        content: url('/assets/images/contact/GithubHover.svg');
+    }
+
+    &.mail::before {
+        content: url('/assets/images/contact/Mail.svg');
+    }
+
+    &.mail:hover::before {
+        content: url('/assets/images/contact/MailHover.svg');
+    }
+}
+
+.email-text {
+    display: block;
+}
+.social-link {
+    &.mail {
+        display: none;
     }
 }
 
@@ -124,7 +139,6 @@ h1 {
     position: absolute;
     height: 20px;
     width: 450px;
-    // background-color: rgb(222, 200, 243);
     left: -180px;
     bottom: 65px;
     transform: rotate(90deg);
@@ -158,4 +172,50 @@ app-text-marquee {
     width: 100vw;
     overflow: hidden;
     z-index: 10;
+}
+
+@media (max-width: 700px) {
+    .landing {
+        position: relative;
+    }
+
+    .wrapper {
+        min-height: 460px;
+    }
+
+    h2 {
+        font-size: clamp(20px, 6vw, 32px);
+    }
+
+    h1 {
+        font-size: clamp(40px, 12vw, 76px);
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .email-text {
+        display: none;
+    }
+
+    .socials .email-icon {
+        display: block;
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        color: varia.$main-color;
+        transform: rotate(90deg);
+    }
+
+    .social-link {
+        &.mail {
+            display: block;
+        }
+    }
+    app-text-marquee {
+        top: max(89%, 480px);
+    }
+    .socials {
+        position: absolute;
+        bottom: 0;
+    }
 }

@@ -1,4 +1,4 @@
-@use "../../../../public/assets/abstract/variables.scss" as varia;
+@use '../../../../public/assets/abstract/variables.scss' as varia;
 
 .wrapper {
     padding-top: 50px;
@@ -82,4 +82,52 @@ button {
     border: 2px solid white;
     color: white;
     padding: 15px;
+}
+
+@media (max-width: 1240px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        padding-bottom: 50px;
+    }
+
+    .biography-container {
+        width: 100%;
+        max-width: 560px;
+    }
+
+    .About-me-container {
+        height: auto;
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .item-container {
+        width: 100%;
+        max-width: 560px;
+    }
+}
+
+@media (max-width: 700px) {
+    .About-me-container {
+        padding: 16px;
+
+        h1 {
+            font-size: clamp(40px, 11vw, 64px);
+        }
+    }
+
+    .item-container {
+        gap: 24px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .topic-text {
+        font-size: 14px;
+    }
 }
