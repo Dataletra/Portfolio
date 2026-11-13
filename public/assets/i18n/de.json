@@ -1,0 +1,42 @@
+{
+    "utility": {
+        "checkWork": "Projekte",
+        "contactMe": "Kontakt",
+        "letsTalk": "Let's Talk"
+    },
+    "aboutMe": {
+        "label": "Wer ich bin",
+        "title": "Über mich",
+        "bio": "Mit einem Hintergrund im Gastgewerbe bringe ich menschenzentrierte Fürsorge in den Code. Ich schlage die Brücke zwischen Menschen und Technologie und verwandle die Visionen meiner Kunden durch Empathie, Klarheit und technische Präzision in nahtlose digitale Erlebnisse.",
+        "location": "Wohnhaft in Schleswig-Holstein, Deutschland.<br />Weltweit tätig",
+        "curiosity": "Bessere Wege zur Lösung von Problemen zu finden, macht das Entwickeln für mich so spannend. Technologie entwickelt sich ständig weiter – und ich mich mit ihr.",
+        "approach": "Jede Herausforderung ist eine Feedbackschleife. Mein Ansatz verbindet analytisches Denken, um Ursachen auf den Grund zu gehen, mit Kreativität, um saubere, unkonventionelle Lösungen zu entwickeln, wenn Standardmuster nicht ausreichen. Wenn Hürden auftauchen, hält Ausdauer den Schwung aufrecht, und Zusammenarbeit sorgt dafür, dass jede Idee zu ihrer effizientesten Form reift."
+    },
+    "technologies": {
+        "label": "Who I am",
+        "title": "About me",
+        "bio": "bio"
+    },
+    "colleagues": {
+        "heading": "Was meine Kollegen über mich sagen",
+        "previous": "Vorherige Bewertung",
+        "next": "Nächste Bewertung",
+        "reviews": [
+            {
+                "name": "Name Surname",
+                "role": "Berufsbezeichnung",
+                "quote": "1"
+            },
+            {
+                "name": "Name Surname",
+                "role": "Berufsbezeichnung",
+                "quote": "2"
+            },
+            {
+                "name": "Name Swirklich sehr langer name und so urname",
+                "role": "Berufsbezeichnung",
+                "quote": "Name Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urname"
+            }
+        ]
+    }
+}

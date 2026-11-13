@@ -66,8 +66,23 @@
 .detail-text-container {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
 }
 
+.topic-text {
+    margin-top: 0;
+    margin-left: 10px;
+}
+.topic-icon {
+    width: 32px;
+    height: 32px;
+}
+.topic-icon-location {
+    width: 32px;
+    height: 32px;
+    left: -1px;
+    margin-right: 1px;
+}
 @media (max-width: 1240px) {
     .wrapper {
         flex-direction: column;

@@ -3,14 +3,13 @@
         <p class="bio-label">Technologies</p>
         <div class="About-me-container">
             <h1>Skill Set</h1>
-            <p class="bio">
-                I leverage modern front-end technologies to build clean, responsive, and user-centric web applications.
-                In a field that evolves daily, I thrive on continuous learning—quickly adapting to new technologies and
-                embracing industry shifts to keep every project modern, efficient, and forward-thinking.
-            </p>
-            <h3>You need <span class="main-color">another skill?</span></h3>
-            <p>Feel free to contact me. I look forward to <br />expanding on my previous knowledge.</p>
-            <button>Let's Talk</button>
+            <p class="bio">{{ i18n.t('technologies.bio') }}</p>
+            <h3>
+                {{ i18n.t('technologies.anotherSkill') }}
+                <span class="main-color">{{ i18n.t('technologies.anotherSkillHighlight') }} </span>
+            </h3>
+            <p>{{ i18n.t('technologies.pleaseContact') }}</p>
+            <button>{{ i18n.t('utility.letsTalk') }}</button>
         </div>
     </div>
     <div class="item-container">

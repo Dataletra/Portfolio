@@ -1,7 +1,12 @@
 <header [class.scrolled]="isScrolledPast100Dvh()">
     <div class="switch">
         <label class="switch__wrapper">
-            <input type="checkbox" />
+            <input
+                type="checkbox"
+                aria-label="Switch language"
+                [checked]="i18n.lang() === 'de'"
+                (change)="i18n.toggle()"
+            />
             <span class="switch__slider"></span>
             <div></div>
         </label>

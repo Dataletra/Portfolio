@@ -1,0 +1,60 @@
+{
+    "landing": {
+        "jobTitle": "Frontend Developer",
+        "basedIn": "Based in Schleswig-Holstein",
+        "openToWork": "open to work",
+        "remoteWork": "Available for remote work"
+    },
+    "header": {
+        "aboutMe": "About me",
+        "projects": "Projects"
+    },
+    "utility": {
+        "checkWork": "Projects",
+        "contactMe": "Contact Me",
+        "letsTalk": "Let's Talk"
+    },
+    "aboutMe": {
+        "label": "Who I am",
+        "title": "About me",
+        "bio": "With a background in hospitality, I bring human-centric care to code. I bridge the gap between people and technology, turning client visions into seamless digital experiences through empathy, clarity, and technical precision.",
+        "location": "Based in Schleswig-Holstein, Germany.<br />Working worldwide",
+        "curiosity": "Finding better ways to solve problems is what makes building things exciting. Technology never stops evolving, and neither do I.",
+        "approach": "Every challenge is a feedback loop. My approach blends analytical thinking to dissect root causes with creativity to design clean, non-standard solutions when typical patterns fall short. When hurdles appear, persistence keeps the momentum going, and collaboration ensures every idea gets refined into its most efficient form."
+    },
+    "technologies": {
+        "label": "Skill Set",
+        "title": "Technologies",
+        "anotherSkill": "You need",
+        "anotherSkillHighlight": "another skill?",
+        "pleaseContact": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+        "bio": "I leverage modern front-end technologies to build clean, responsive, and user-centric web applications. In a field that evolves daily, I thrive on continuous learning—quickly adapting to new technologies and embracing industry shifts to keep every project modern, efficient, and forward-thinking."
+    },
+    "featuedProjects": {
+        "label": "Portfolio",
+        "title": "Featured Projects",
+        "description": "Explore a selection of my work here - interact with my projects to see my skills in action."
+    },
+    "colleagues": {
+        "heading": "What my colleagues say about me",
+        "previous": "Previous review",
+        "next": "Next review",
+        "reviews": [
+            {
+                "name": "Name Surname",
+                "role": "Job Title",
+                "quote": "1"
+            },
+            {
+                "name": "Name Surname",
+                "role": "Job Title",
+                "quote": "2"
+            },
+            {
+                "name": "Name Swirklich sehr langer name und so urname",
+                "role": "Job Title",
+                "quote": "Name Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urname"
+            }
+        ]
+    }
+}
