@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Landing } from '../landing/landing';
 import { AboutMe } from '../about-me/about-me';
 import { FeaturedProjects } from '../featured-projects/featured-projects';
@@ -11,6 +11,7 @@ import { Header } from '../header/header';
   selector: 'app-core',
   imports: [Landing, AboutMe, Technologies, FeaturedProjects, Colleagues, ContactMe, Header],
   templateUrl: './core.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './core.scss',
 })
-export class Core { }
+export class Core {}
