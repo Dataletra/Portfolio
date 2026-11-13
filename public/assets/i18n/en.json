@@ -18,7 +18,7 @@
         "label": "Who I am",
         "title": "About me",
         "bio": "With a background in hospitality, I bring human-centric care to code. I bridge the gap between people and technology, turning client visions into seamless digital experiences through empathy, clarity, and technical precision.",
-        "location": "Based in Schleswig-Holstein, Germany.<br />Working worldwide",
+        "location": "Based in Schleswig-Holstein, Germany. Working worldwide",
         "curiosity": "Finding better ways to solve problems is what makes building things exciting. Technology never stops evolving, and neither do I.",
         "approach": "Every challenge is a feedback loop. My approach blends analytical thinking to dissect root causes with creativity to design clean, non-standard solutions when typical patterns fall short. When hurdles appear, persistence keeps the momentum going, and collaboration ensures every idea gets refined into its most efficient form."
     },
@@ -33,7 +33,22 @@
     "featuedProjects": {
         "label": "Portfolio",
         "title": "Featured Projects",
-        "description": "Explore a selection of my work here - interact with my projects to see my skills in action."
+        "description": "Explore a selection of my work here - interact with my projects to see my skills in action.",
+        "modal": {
+            "about": "What is this project about?",
+            "github": "GitHub",
+            "liveTest": "Live Test",
+            "next": "Next project",
+            "close": "Close"
+        },
+        "projects": {
+            "join": {
+                "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag-and-drop functions, assign users and categories."
+            },
+            "elPolloLoco": {
+                "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the giant chicken."
+            }
+        }
     },
     "colleagues": {
         "heading": "What my colleagues say about me",
@@ -56,5 +71,25 @@
                 "quote": "Name Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urname"
             }
         ]
+    },
+    "contact": {
+        "label": "Contact me",
+        "title": "Let's work together",
+        "subtitle": "Got a problem to solve?",
+        "description": "Whether you need a brand-new web application built from scratch, an interface optimized for performance, or a seamless digital experience, I'm ready to add value from day one.",
+        "callToAction": "Need a Frontend developer?",
+        "callToActionHighlight": "Let's talk!",
+        "form": {
+            "nameLabel": "What's your name?",
+            "namePlaceholder": "Your name goes here",
+            "emailLabel": "What's your email?",
+            "emailPlaceholder": "youremail@email.com",
+            "messageLabel": "How can I help you?",
+            "messagePlaceholder": "Hello, I am interested in...",
+            "policyPrefix": "I've read the",
+            "policyLink": "privacy policy",
+            "policySuffix": "and agree to the processing of my data as outlined",
+            "submitButton": "Say Hello ;)"
+        }
     }
 }

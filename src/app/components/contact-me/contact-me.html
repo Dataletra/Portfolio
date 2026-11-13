@@ -1,23 +1,27 @@
 <div class="wrapper" id="scroll-contact-me">
     <div class="left">
-        <p><span class="main-color">Contact me</span></p>
-        <h1><span class="main-color">Let's work together</span></h1>
-        <h3>Got a problem to solve?</h3>
         <p>
-            Whether you need a brand-new web application built from scratch, an interface optimized for performance, or
-            a seamless digital experience, I'm ready to add value from day one.
+            <span class="main-color">{{ i18n.t('contact.label') }}</span>
         </p>
-        <p>Need a Frontend developer? <span class="main-color">Let's talk!</span></p>
+        <h1>
+            <span class="main-color">{{ i18n.t('contact.title') }}</span>
+        </h1>
+        <h3>{{ i18n.t('contact.subtitle') }}</h3>
+        <p>{{ i18n.t('contact.description') }}</p>
+        <p>
+            {{ i18n.t('contact.callToAction') }}
+            <span class="main-color">{{ i18n.t('contact.callToActionHighlight') }}</span>
+        </p>
     </div>
     <div class="right">
         <form [formGroup]="contactform" (ngSubmit)="onSubmit()">
             <div class="contact-item-first">
-                <h3>What's your name?</h3>
+                <h3>{{ i18n.t('contact.form.nameLabel') }}</h3>
                 <input
                     id="name"
                     type="text"
                     formControlName="name"
-                    placeholder="Your name goes here"
+                    [placeholder]="i18n.t('contact.form.namePlaceholder')"
                     (input)="resetTouchedOnInput('name')"
                 />
                 @if (!name?.valid && name?.touched) {
@@ -25,12 +29,12 @@
                 }
             </div>
             <div class="contact-item">
-                <h3>What's your email?</h3>
+                <h3>{{ i18n.t('contact.form.emailLabel') }}</h3>
                 <input
                     id="email"
                     type="text"
                     formControlName="email"
-                    placeholder="youremail@email.com"
+                    [placeholder]="i18n.t('contact.form.emailPlaceholder')"
                     (input)="resetTouchedOnInput('email')"
                 />
                 @if (!email?.valid && email?.touched) {
@@ -38,12 +42,12 @@
                 }
             </div>
             <div class="contact-item-last">
-                <h3>How can I help you?</h3>
+                <h3>{{ i18n.t('contact.form.messageLabel') }}</h3>
                 <input
                     id="message"
                     type="text"
                     formControlName="message"
-                    placeholder="Hello Data, I am interested in..."
+                    [placeholder]="i18n.t('contact.form.messagePlaceholder')"
                     (input)="resetTouchedOnInput('message')"
                 />
                 @if (!message?.valid && message?.touched) {
@@ -53,11 +57,12 @@
             <div class="checkbox-container">
                 <input formControlName="policy" type="checkbox" class="checkbox-privacy-policy" />
                 <p>
-                    I've read the <a href="/angular-projects/portfolio/privacy-policy">privacy policy</a> and agree to
-                    the processing of my data as outlined
+                    {{ i18n.t('contact.form.policyPrefix') }}
+                    <a href="/angular-projects/portfolio/privacy-policy">{{ i18n.t('contact.form.policyLink') }}</a>
+                    {{ i18n.t('contact.form.policySuffix') }}
                 </p>
             </div>
-            <button type="submit" [disabled]="!contactform.valid">Say Hello ;)</button>
+            <button type="submit" [disabled]="!contactform.valid">{{ i18n.t('contact.form.submitButton') }}</button>
         </form>
     </div>
 </div>

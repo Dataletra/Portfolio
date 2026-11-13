@@ -27,7 +27,7 @@
 
     <nav class="nav" [class.nav-open]="menuOpen">
         <a (click)="scrollToSection('scroll-about-me')">
-            <p>About me</p>
+            <p>{{ i18n.t('header.aboutMe') }}</p>
             <p class="fancyDot">•</p>
         </a>
 
@@ -37,7 +37,7 @@
         </a>
 
         <a (click)="scrollToSection('scroll-featured-projects')">
-            <p>Projects</p>
+            <p>{{ i18n.t('header.projects') }}</p>
             <p class="fancyDot">•</p>
         </a>
     </nav>

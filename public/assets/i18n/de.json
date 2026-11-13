@@ -1,21 +1,54 @@
 {
+    "landing": {
+        "jobTitle": "Frontend-Entwickler",
+        "basedIn": "Ansässig in Schleswig-Holstein",
+        "openToWork": "offen für Jobangebote",
+        "remoteWork": "Verfügbar für Remote-Arbeit"
+    },
+    "header": {
+        "aboutMe": "Über mich",
+        "projects": "Projekte"
+    },
     "utility": {
         "checkWork": "Projekte",
         "contactMe": "Kontakt",
-        "letsTalk": "Let's Talk"
+        "letsTalk": "Lass uns reden"
     },
     "aboutMe": {
         "label": "Wer ich bin",
         "title": "Über mich",
-        "bio": "Mit einem Hintergrund im Gastgewerbe bringe ich menschenzentrierte Fürsorge in den Code. Ich schlage die Brücke zwischen Menschen und Technologie und verwandle die Visionen meiner Kunden durch Empathie, Klarheit und technische Präzision in nahtlose digitale Erlebnisse.",
-        "location": "Wohnhaft in Schleswig-Holstein, Deutschland.<br />Weltweit tätig",
-        "curiosity": "Bessere Wege zur Lösung von Problemen zu finden, macht das Entwickeln für mich so spannend. Technologie entwickelt sich ständig weiter – und ich mich mit ihr.",
-        "approach": "Jede Herausforderung ist eine Feedbackschleife. Mein Ansatz verbindet analytisches Denken, um Ursachen auf den Grund zu gehen, mit Kreativität, um saubere, unkonventionelle Lösungen zu entwickeln, wenn Standardmuster nicht ausreichen. Wenn Hürden auftauchen, hält Ausdauer den Schwung aufrecht, und Zusammenarbeit sorgt dafür, dass jede Idee zu ihrer effizientesten Form reift."
+        "bio": "Mit meinem Hintergrund in der Gastronomie bringe ich ein starkes Gespür für Menschen in den Code. Ich schlage die Brücke zwischen Nutzer und Technologie und verwandle Kundenwünsche durch Empathie, Klarheit und technische Präzision in nahtlose digitale Erlebnisse.",
+        "location": "Ansässig in Schleswig-Holstein, Deutschland. Weltweit tätig",
+        "curiosity": "Bessere Wege zur Problemlösung zu finden, macht die Entwicklung für mich so spannend. Technologie steht niemals still – und ich auch nicht.",
+        "approach": "Jede Herausforderung ist ein Lernprozess. Mein Ansatz verbindet analytisches Denken, um Ursachen auf den Grund zu gehen, mit Kreativität für saubere, unkonventionelle Lösungen, wenn Standardmuster nicht ausreichen. Bei Hürden sorgt Ausdauer für den nötigen Schwung, und Teamarbeit garantiert, dass jede Idee zu ihrer effizientesten Form reift."
     },
     "technologies": {
-        "label": "Who I am",
-        "title": "About me",
-        "bio": "bio"
+        "label": "Skill-Set",
+        "title": "Technologien",
+        "anotherSkill": "Du brauchst",
+        "anotherSkillHighlight": "einen anderen Skill?",
+        "pleaseContact": "Kontaktiere mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+        "bio": "Ich nutze moderne Frontend-Technologien, um saubere, responsive und nutzerzentrierte Webanwendungen zu entwickeln. In einer Branche, die sich täglich wandelt, treibt mich kontinuierliches Lernen an – ich arbeite mich schnell in neue Technologien ein und halte jedes Projekt modern, effizient und zukunftssicher."
+    },
+    "featuedProjects": {
+        "label": "Portfolio",
+        "title": "Ausgewählte Projekte",
+        "description": "Entdecke hier eine Auswahl meiner Arbeiten – teste meine Projekte interaktiv, um meine Fähigkeiten in Aktion zu sehen.",
+        "modal": {
+            "about": "Worum geht es in diesem Projekt?",
+            "github": "GitHub",
+            "liveTest": "Live-Test",
+            "next": "Nächstes Projekt",
+            "close": "Schließen"
+        },
+        "projects": {
+            "join": {
+                "description": "Aufgabenmanager nach dem Kanban-Prinzip. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Nutzer zu und vergib Kategorien."
+            },
+            "elPolloLoco": {
+                "description": "Jump-'n'-Run- und Wurfspiel auf Basis eines objektorientierten Ansatzes. Hilf Pepe, Münzen und Salsa-Flaschen zu sammeln, um gegen das Riesenhuhn anzutreten."
+            }
+        }
     },
     "colleagues": {
         "heading": "Was meine Kollegen über mich sagen",
@@ -23,20 +56,40 @@
         "next": "Nächste Bewertung",
         "reviews": [
             {
-                "name": "Name Surname",
-                "role": "Berufsbezeichnung",
+                "name": "Vorname Nachname",
+                "role": "Jobtitel",
                 "quote": "1"
             },
             {
-                "name": "Name Surname",
-                "role": "Berufsbezeichnung",
+                "name": "Vorname Nachname",
+                "role": "Jobtitel",
                 "quote": "2"
             },
             {
                 "name": "Name Swirklich sehr langer name und so urname",
-                "role": "Berufsbezeichnung",
+                "role": "Jobtitel",
                 "quote": "Name Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urname"
             }
         ]
+    },
+    "contact": {
+        "label": "Kontakt",
+        "title": "Lass uns zusammenarbeiten",
+        "subtitle": "Du hast ein Problem zu lösen?",
+        "description": "Ob du eine brandneue Webanwendung von Grund auf benötigst, eine auf Performance optimierte Oberfläche oder ein nahtloses digitales Erlebnis – ich bin bereit, vom ersten Tag an Mehrwert zu liefern.",
+        "callToAction": "Du suchst einen Frontend-Entwickler?",
+        "callToActionHighlight": "Lass uns reden!",
+        "form": {
+            "nameLabel": "Wie heißt du?",
+            "namePlaceholder": "Dein Name",
+            "emailLabel": "Wie lautet deine E-Mail-Adresse?",
+            "emailPlaceholder": "deine.email@email.com",
+            "messageLabel": "Wie kann ich dir helfen?",
+            "messagePlaceholder": "Hallo, ich interessiere mich für...",
+            "policyPrefix": "Ich habe die",
+            "policyLink": "Datenschutzerklärung",
+            "policySuffix": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu",
+            "submitButton": "Sag Hallo ;)"
+        }
     }
 }
