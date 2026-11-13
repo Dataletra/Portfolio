@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { effect, inject, Injectable, signal } from '@angular/core';
+import { effect, inject, Service, signal } from '@angular/core';
 
 export type Language = 'en' | 'de';
 
@@ -9,7 +9,7 @@ const SUPPORTED_LANGUAGES: Language[] = ['en', 'de'];
 const DEFAULT_LANGUAGE: Language = 'en';
 const STORAGE_KEY = 'portfolio-language';
 
-@Injectable({ providedIn: 'root' })
+@Service()
 export class TranslationService {
     private http = inject(HttpClient);
     private cache = new Map<Language, Translations>();
