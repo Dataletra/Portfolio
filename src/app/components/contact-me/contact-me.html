@@ -14,13 +14,14 @@
         </p>
     </div>
     <div class="right">
-        <form [formGroup]="contactform" (ngSubmit)="onSubmit()">
+        <form [formGroup]="contactform" (ngSubmit)="onSubmit($event)" id="form">
             <div class="contact-item-first">
                 <h3>{{ i18n.t('contact.form.nameLabel') }}</h3>
                 <input
                     id="name"
                     type="text"
                     formControlName="name"
+                    name="name"
                     [placeholder]="i18n.t('contact.form.namePlaceholder')"
                     (input)="resetTouchedOnInput('name')"
                 />
@@ -34,6 +35,7 @@
                     id="email"
                     type="text"
                     formControlName="email"
+                    name="email"
                     [placeholder]="i18n.t('contact.form.emailPlaceholder')"
                     (input)="resetTouchedOnInput('email')"
                 />
@@ -47,6 +49,7 @@
                     id="message"
                     type="text"
                     formControlName="message"
+                    name="message"
                     [placeholder]="i18n.t('contact.form.messagePlaceholder')"
                     (input)="resetTouchedOnInput('message')"
                 />
@@ -55,7 +58,7 @@
                 }
             </div>
             <div class="checkbox-container">
-                <input formControlName="policy" type="checkbox" class="checkbox-privacy-policy" />
+                <input formControlName="policy" type="checkbox" class="checkbox-privacy-policy" name="policy" />
                 <p>
                     {{ i18n.t('contact.form.policyPrefix') }}
                     <a href="/angular-projects/portfolio/privacy-policy">{{ i18n.t('contact.form.policyLink') }}</a>

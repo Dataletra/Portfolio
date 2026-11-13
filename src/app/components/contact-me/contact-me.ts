@@ -7,9 +7,9 @@ import {
     ValidatorFn,
     AbstractControl,
     ValidationErrors,
-    FormSubmittedEvent,
 } from '@angular/forms';
 import { TranslationService } from '../../services/translation.service';
+import emailjs from 'emailjs-com';
 
 @Component({
     selector: 'app-contact-me',
@@ -20,6 +20,8 @@ import { TranslationService } from '../../services/translation.service';
 })
 export class ContactMe {
     protected i18n = inject(TranslationService);
+
+    status: 'sending' | 'success' | 'error' | null = null;
 
     contactform = new FormGroup({
         name: new FormControl('', {
@@ -47,7 +49,7 @@ export class ContactMe {
                 this.minWordsValidator(3),
             ],
         }),
-        policy: new FormControl('', {
+        policy: new FormControl(false, {
             validators: [Validators.required, Validators.requiredTrue],
         }),
     });
@@ -55,7 +57,7 @@ export class ContactMe {
     emailEndsWithLettersValidator(): ValidatorFn {
         return (control: AbstractControl): ValidationErrors | null => {
             const Regex = /\.[a-z]{2,}$/;
-            return Regex.test(control.value.trim()) ? null : { ending: { value: control.value } };
+            return control.value && Regex.test(control.value.trim()) ? null : { ending: { value: control.value } };
         };
     }
 
@@ -154,7 +156,28 @@ export class ContactMe {
         }
     }
 
-    onSubmit() {
-        console.warn(this.contactform.value);
+    onSubmit(event: Event) {
+        event.preventDefault();
+
+        if (this.contactform.invalid) {
+            this.contactform.markAllAsTouched();
+            return;
+        }
+
+        this.status = 'sending';
+
+        emailjs
+            .sendForm('default_service', 'template_74ienqs', event.target as HTMLFormElement, 'PRb_GDLhvtr54sgUl')
+            .then((result) => {
+                console.log(result.text);
+                this.status = 'success';
+                this.contactform.reset();
+                setTimeout(() => (this.status = null), 3000);
+            })
+            .catch((error) => {
+                console.log(error.text);
+                this.status = 'error';
+                setTimeout(() => (this.status = null), 3000);
+            });
     }
 }
