@@ -1,0 +1,81 @@
+@use '../../../../public/assets/abstract/variables.scss' as varia;
+
+.legal-wrapper {
+    width: 100%;
+    min-height: 80vh;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+
+    .legal-container {
+        width: 100%;
+        max-width: 900px;
+        padding: 40px;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: varia.$main-color;
+        }
+
+        .legal-section {
+            margin-bottom: 30px;
+
+            h2 {
+                font-size: 1.25rem;
+                margin-bottom: 12px;
+                color: #ffffff;
+            }
+
+            ul {
+                list-style-type: disc;
+                margin-left: 20px;
+                margin-bottom: 10px;
+
+                li {
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    color: varia.$main-color;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: varia.$main-color;
+                margin-bottom: 10px;
+
+                a {
+                    color: varia.$main-color;
+                    text-decoration: underline;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            .legal-date {
+                margin-top: 20px;
+                font-size: 0.95rem;
+                color: varia.$main-color;
+            }
+        }
+    }
+}
+
+// Responsive adjustments for mobile screens
+@media (max-width: 768px) {
+    .legal-wrapper {
+        padding: 20px 10px;
+
+        .legal-container {
+            padding: 20px;
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
