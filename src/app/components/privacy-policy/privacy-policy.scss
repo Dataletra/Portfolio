@@ -1,0 +1,68 @@
+@use '../../../../public/assets/abstract/variables.scss' as varia;
+
+.privacy-wrapper {
+    width: 100%;
+    min-height: 80vh;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+
+    .privacy-container {
+        width: 100%;
+        max-width: 900px;
+        padding: 40px;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: varia.$main-color;
+        }
+
+        .privacy-section {
+            margin-bottom: 30px;
+
+            h2 {
+                font-size: 1.25rem;
+                margin-bottom: 12px;
+                color: #ffffff;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: varia.$main-color;
+                margin-bottom: 10px;
+
+                a {
+                    color: varia.$main-color;
+                    text-decoration: underline;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            .privacy-date {
+                margin-top: 20px;
+                font-size: 0.95rem;
+                color: varia.$main-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .privacy-wrapper {
+        padding: 20px 10px;
+
+        .privacy-container {
+            padding: 20px;
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}

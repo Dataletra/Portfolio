@@ -1,2 +1,36 @@
 <app-header></app-header>
-<p>privacy-policy works!</p>
+
+<div class="privacy-wrapper">
+    <div class="privacy-container">
+        <h1>{{ i18n.t('privacy.title') }}</h1>
+
+        <section class="privacy-section">
+            <h2>{{ i18n.t('privacy.sec1Heading') }}</h2>
+            <p>{{ i18n.t('privacy.sec1Text') }}</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>{{ i18n.t('privacy.sec2Heading') }}</h2>
+            <p>{{ i18n.t('privacy.sec2Text') }}</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>{{ i18n.t('privacy.sec3Heading') }}</h2>
+            <p>{{ i18n.t('privacy.sec3Text1') }}</p>
+            <p>{{ i18n.t('privacy.sec3Text2') }}</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>{{ i18n.t('privacy.sec4Heading') }}</h2>
+            <p>{{ i18n.t('privacy.sec4Text') }}</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>{{ i18n.t('privacy.sec5Heading') }}</h2>
+            <p>{{ i18n.t('privacy.sec5Text') }}</p>
+            <p class="privacy-date">
+                <strong>{{ i18n.t('privacy.dateLabel') }}:</strong> November 16, 2026
+            </p>
+        </section>
+    </div>
+</div>

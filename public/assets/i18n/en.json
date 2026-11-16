@@ -112,5 +112,20 @@
         "indemnityText": "You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.",
         "contactQuery": "For any questions or notices, please contact us at",
         "dateLabel": "Date"
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "sec1Heading": "1. An overview of data protection",
+        "sec1Text": "General information: The following gives a simple overview of what happens to your personal information when you visit our website. Personal information is any data with which you could be personally identified.",
+        "sec2Heading": "2. Hosting and external services",
+        "sec2Text": "We host our portfolio on external servers or cloud services. The personal data collected on this website is stored on the servers of the hosting provider. This may include IP addresses, contact requests, metadata, and communications.",
+        "sec3Heading": "3. Contact form and EmailJS",
+        "sec3Text1": "If you send us inquiries via the contact form, your details from the inquiry form including the contact data you provided there will be stored by us for the purpose of processing the inquiry and in case of follow-up questions.",
+        "sec3Text2": "We use EmailJS to handle contact form submissions. Your data is transmitted securely to deliver your message to our email inbox. We do not share this data with third parties.",
+        "sec4Heading": "4. Your rights regarding your data",
+        "sec4Text": "You have the right at any time to request free information about your stored personal data, its origin, recipients, and the purpose of its collection. You also have the right to request the correction or deletion of this data.",
+        "sec5Heading": "5. Contact us",
+        "sec5Text": "If you have any questions regarding data protection, please feel free to reach out via our contact page.",
+        "dateLabel": "Date"
     }
 }

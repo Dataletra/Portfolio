@@ -112,5 +112,20 @@
         "indemnityText": "Sie erklären sich damit einverstanden, uns, die aufgeführten Studierenden, die Developer Akademie und unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Direktoren, Vertreter und Mitarbeiter von und gegen alle Ansprüche, Forderungen, Verluste, Schäden, Kosten oder Verbindlichkeiten (einschließlich angemessener Anwaltskosten) schadlos zu halten, die sich aus oder im Zusammenhang mit Ihrer Nutzung von Portfolio und/oder Ihrem Verstoß gegen diesen rechtlichen Hinweis ergeben.",
         "contactQuery": "Bei Fragen oder Mitteilungen kontaktieren Sie uns bitte unter",
         "dateLabel": "Datum"
+    },
+    "privacy": {
+        "title": "Datenschutzerklärung",
+        "sec1Heading": "1. Datenschutz auf einen Blick",
+        "sec1Text": "Allgemeine Hinweise: Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.",
+        "sec2Heading": "2. Hosting und externe Dienste",
+        "sec2Text": "Wir hosten unsere Website bei externen Anbietern (Hosting-Providern). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten handeln.",
+        "sec3Heading": "3. Kontaktformular und EmailJS",
+        "sec3Text1": "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.",
+        "sec3Text2": "Wir nutzen den Dienst EmailJS zur Abwicklung von Kontaktformular-Nachrichten. Ihre Daten werden sicher übertragen, um Ihre Nachricht an unser Postfach zu übermitteln. Eine Weitergabe an Dritte findet nicht statt.",
+        "sec4Heading": "4. Ihre Rechte bezüglich Ihrer Daten",
+        "sec4Text": "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem das Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.",
+        "sec5Heading": "5. Kontakt",
+        "sec5Text": "Wenn Sie Fragen zum Datenschutz haben, können Sie sich jederzeit über unsere Kontaktseite an uns wenden.",
+        "dateLabel": "Datum"
     }
 }
