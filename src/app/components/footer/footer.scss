@@ -1,3 +1,5 @@
+@use '../../../../public/assets/abstract/variables.scss' as varia;
+
 footer {
     display: flex;
     flex-direction: row;
@@ -12,6 +14,7 @@ footer {
     color: white;
 }
 .links {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,6 +28,9 @@ footer {
 a {
     text-decoration: none;
     color: white;
+    &:hover {
+        color: varia.$main-color;
+    }
     &::after {
         text-decoration: none;
         color: white;
