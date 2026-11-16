@@ -19,10 +19,6 @@
 
 .description-label {
     color: white;
-    width: 100%;
-    max-width: 700px;
-    word-break: normal;
-    overflow-wrap: break-word;
 }
 
 .featured-projects-container {
@@ -62,6 +58,7 @@
 }
 
 .project-item {
+    cursor: pointer;
     @extend %project-row-base;
     border-top: 1px solid varia.$main-color;
     border-bottom: 1px solid varia.$main-color;
@@ -76,7 +73,9 @@
         border-bottom: 1px solid varia.$main-color;
     }
 }
-
+.project-itemlast {
+    cursor: pointer;
+}
 .project-skills {
     justify-content: center;
     align-items: center;
@@ -305,11 +304,12 @@
 
 @media (max-width: 900px) {
     .modal-dialog {
-        flex-direction: column-reverse;
+        flex-direction: column;
         max-height: 90vh;
         overflow-y: auto;
     }
     .modal-right {
+        order: -1;
         padding-top: 20px;
         padding-bottom: 0;
     }
