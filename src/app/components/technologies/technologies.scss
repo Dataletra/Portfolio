@@ -84,6 +84,19 @@ button {
     padding: 15px;
 }
 
+.contact-btn {
+    border-radius: 28px;
+    padding: 15px;
+    background-color: #08463b00;
+    border: 2px solid white;
+    color: white;
+    transition: 0.2s ease;
+    &:hover {
+        transition: 0.2s ease;
+        cursor: pointer;
+        border: 2px solid varia.$main-color-highlight;
+    }
+}
 @media (max-width: 1240px) {
     .wrapper {
         flex-direction: column;
