@@ -12,6 +12,7 @@
     align-items: center;
     text-align: center;
     color: white;
+    min-height: fit-content;
 }
 
 .heading {
@@ -31,7 +32,9 @@
 .carousel-stage {
     position: relative;
     width: 100%;
-    height: 260px;
+    display: grid;
+    align-items: stretch;
+    min-height: 280px;
     overflow: hidden;
 }
 
@@ -69,34 +72,32 @@
 }
 
 .review-card {
+    grid-area: 1 / 1;
+    justify-self: center;
+    position: relative;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
     box-sizing: border-box;
-    height: 250px;
-    width: 600px;
-    padding: 2rem;
+    width: min(600px, calc(100% - 3rem));
+    min-height: 260px;
+    padding: 2rem 2.25rem;
     background-color: #26524b;
     border: 1px solid varia.$main-color;
     border-radius: 28px;
-    transform: translate(-50%, -50%);
     transition:
         transform 0.45s ease,
-        opacity 0.45s ease;
+        opacity 0.45s ease,
+        background-color 0.45s ease;
 
     &-active {
-        transform: translate(-50%, -50%) scale(1);
-        transition: 0.45s ease;
+        transform: scale(1);
         opacity: 1;
         z-index: 3;
         cursor: default;
     }
 
     &-prev {
-        transform: translate(calc(-50% - 100% - 24px), -50%) scale(0.9);
-        transition: 0.45s ease;
+        transform: translateX(calc(-100% - 24px)) scale(0.9);
         opacity: 0.65;
         background-color: #212e2b;
         z-index: 1;
@@ -104,8 +105,7 @@
     }
 
     &-next {
-        transform: translate(calc(-50% + 100% + 24px), -50%) scale(0.9);
-        transition: 0.45s ease;
+        transform: translateX(calc(100% + 24px)) scale(0.9);
         opacity: 0.65;
         background-color: #212e2b;
         z-index: 1;
@@ -115,23 +115,29 @@
 
 .review-card-quote {
     margin: 0;
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 1.5;
-    text-align: left;
     flex: 1;
-    min-height: 0;
-    overflow-wrap: anywhere;
+    min-width: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    line-height: 1.65;
+    text-align: left;
+    white-space: pre-line;
+    text-wrap: pretty;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: manual;
 }
 
 .review-card-author-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     width: 100%;
+    margin-top: 1.5rem;
 
     hr {
-        flex: 1;
+        min-width: 12px;
         border: none;
         border-top: 1px solid white;
         margin: 0;
@@ -140,10 +146,14 @@
 
 .review-card-author {
     margin: 0;
+    flex: 0 0 auto;
+    min-width: 0;
+    max-width: 100%;
     color: #919191;
     font-size: 14px;
     white-space: nowrap;
-    flex-shrink: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 // Controls
@@ -209,6 +219,18 @@
 }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .review-card {
+        &-prev {
+            transform: translateX(calc(-100% + 8px)) scale(0.9);
+        }
+
+        &-next {
+            transform: translateX(calc(100% - 8px)) scale(0.9);
+        }
+    }
+}
+
 @media (max-width: 700px) {
     .colleagues-content {
         padding-block: 3.5rem;
@@ -221,31 +243,27 @@
     }
 
     .carousel-stage {
-        height: 340px;
+        min-height: 300px;
     }
 
     .review-card {
-        width: min(300px, 85vw);
-        height: 300px;
-        padding: 1.5rem;
-
-        &-prev {
-            transform: translate(calc(-50% - 100% + 6px), -50%) scale(0.9);
-        }
-
-        &-next {
-            transform: translate(calc(-50% + 100% - 6px), -50%) scale(0.9);
-        }
+        width: calc(100% - 2.5rem);
+        max-width: 420px;
+        min-height: 280px;
+        padding: 1.5rem 1.25rem;
     }
 
     .review-card-quote {
         font-size: 15px;
-        overflow: hidden;
+        line-height: 1.6;
+    }
+
+    .review-card-author-container {
+        gap: 10px;
+        margin-top: 1.25rem;
     }
 
     .review-card-author {
-        white-space: normal;
-        text-align: right;
         font-size: 13px;
     }
 

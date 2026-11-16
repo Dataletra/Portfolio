@@ -56,19 +56,19 @@
         "next": "Next review",
         "reviews": [
             {
-                "name": "Name Surname",
-                "role": "Job Title",
-                "quote": "1"
+                "name": "Ron's Colleague",
+                "role": "Bootcamp Team Member / Developer",
+                "quote": "Ron is the kind of colleague every team wants.\n\nHe explains complex topics clearly and always finds a pragmatic solution when things get stuck."
             },
             {
-                "name": "Name Surname",
-                "role": "Job Title",
-                "quote": "2"
+                "name": "Sven Primus | ",
+                "role": "Developer Akademie / Fullstack Engineer",
+                "quote": "Ron is a doer.\nWhile others are still trying to figure out where to start, Ron exceeds expectations with his ability to get things done. No matter how complicated the challenge, he finds a way to make things work. \nHe is always eager to learn new technologies and share his findings with the team, whenever he discovers something that could spark an idea or prove useful to others. I had the pleasure of working with Ron during a bootcamp, where we spent five weeks building a Kanban board application together. It was a great experience, and I genuinely believe every team could use someone like Ron."
             },
             {
-                "name": "Name Swirklich sehr langer name und so urname",
-                "role": "Job Title",
-                "quote": "Name Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urname"
+                "name": "Ron's Colleague",
+                "role": "Bootcamp Team Member / Developer",
+                "quote": "Ron is a doer. While others are still trying to figure out where to start, Ron exceeds expectations with his ability to get things done. No matter how complicated the challenge, he finds a way to make things work. He is always eager to learn new technologies and share his findings with the team whenever he discovers something that could spark an idea or prove useful to others. I had the pleasure of working with Ron during a bootcamp, where we spent five weeks building a Kanban board application together. It was a great experience, and I genuinely believe every team could use someone like Ron."
             }
         ]
     },

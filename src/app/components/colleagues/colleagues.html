@@ -15,7 +15,9 @@
                         <p class="review-card-quote">{{ review.quote }}</p>
                         <div class="review-card-author-container">
                             <hr />
-                            <p class="review-card-author">{{ review.name }} {{ review.role }}</p>
+                            <p class="review-card-author" [attr.title]="review.name + ' ' + review.role">
+                                {{ review.name }} {{ review.role }}
+                            </p>
                         </div>
                         @if (positionOf(i) === 'prev') {
                             <div class="fade-left"></div>
