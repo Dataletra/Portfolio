@@ -19,6 +19,11 @@
 
 .description-label {
     color: white;
+    width: 100%;
+    max-width: 600px;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: manual;
 }
 
 .featured-projects-container {
@@ -116,8 +121,8 @@
 }
 
 /* ==========================================================================
-   MODAL DIALOG STYLES
-   ========================================================================== */
+    MODAL DIALOG STYLES
+    ========================================================================== */
 
 .modal-backdrop {
     position: fixed;

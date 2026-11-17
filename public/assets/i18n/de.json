@@ -56,19 +56,19 @@
         "next": "Nächste Bewertung",
         "reviews": [
             {
-                "name": "Vorname Nachname",
-                "role": "Jobtitel",
-                "quote": "1"
+                "name": "Frank Preuß",
+                "role": "Developer Akademie | Frontend Entwickler",
+                "quote": "Ron hat ein Talent dafür, komplexe Probleme zu durchdenken, ohne das Wesentliche aus den Augen zu verlieren. Bei kniffligen Logikthemen findet er Lösungswege, auf die man selbst nicht gekommen wäre. Oft macht er aus einem komplizierten Problem eine einfache Lösung.\nZudem schätze ich seine offene Art, sein Wissen zu teilen und anderen weiterzuhelfen. Er arbeitet sich schnell in neue Themen ein und setzt seine Ideen direkt in die Praxis um.\nDie Zusammenarbeit an unserem Kanban-Projekt hat mir viel Spaß gemacht, und ich würde jederzeit wieder mit ihm arbeiten."
             },
             {
-                "name": "Vorname Nachname",
-                "role": "Jobtitel",
-                "quote": "2"
+                "name": "Sven Primus | ",
+                "role": "Developer Akademie | Fullstack-Entwickler",
+                "quote": "Ron ist ein Macher.\nWährend andere überlegen, wo sie anfangen sollen, übertrifft Ron Erwartungen, indem er Dinge anpackt und umsetzt. Egal wie kompliziert die Herausforderung ist, er findet einen Weg.\nEr lernt begierig neue Technologien und teilt Erkenntnisse mit dem Team, sobald etwas eine Idee anstößt oder anderen nützt. Während unseres Bootcamps entwickelten wir fünf Wochen lang gemeinsam eine Kanban-Board-Anwendung. Es war eine großartige Erfahrung, und ich bin überzeugt, dass jedes Team jemanden wie Ron gebrauchen kann."
             },
             {
-                "name": "Name Swirklich sehr langer name und so urname",
-                "role": "Jobtitel",
-                "quote": "Name Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urnameName Swirklich sehr langer name und so urname"
+                "name": "Michael Schmidt",
+                "role": "Softwareentwickler",
+                "quote": "Ron vereint auf seltene Weise starke technische Umsetzung mit echtem Teamgeist. Egal, ob er sich in einen kniffligen Bug einarbeitet oder ein neues Framework erkundet – seine Begeisterung ist ansteckend. Die Zusammenarbeit mit ihm an unserer Kanban-Anwendung hat mir aus erster Hand gezeigt, wie viel Mehrwert er vom ersten Tag an liefert."
             }
         ]
     },

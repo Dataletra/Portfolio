@@ -56,19 +56,19 @@
         "next": "Next review",
         "reviews": [
             {
-                "name": "Ron's Colleague",
-                "role": "Bootcamp Team Member | Developer",
-                "quote": "Ron is the kind of colleague every team wants.\n\nHe explains complex topics clearly and always finds a pragmatic solution when things get stuck."
+                "name": "Frank Preuß",
+                "role": "Developer Akademie | Frontend Developer",
+                "quote": "Ron has a talent for thinking through complex problems without losing sight of what matters. When dealing with tricky logic challenges, he finds solutions you wouldn't have thought of yourself - often turning a complicated problem into a simple fix.\nI also appreciate his open nature in sharing his knowledge and helping others out. He gets up to speed on new topics quickly and puts his ideas straight into practice.\nCollaborating on our Kanban project was a lot of fun, and I would gladly work with him again anytime."
             },
             {
                 "name": "Sven Primus | ",
                 "role": "Developer Akademie | Fullstack Engineer",
-                "quote": "Ron is a doer.\nWhile others are still trying to figure out where to start, Ron exceeds expectations with his ability to get things done. No matter how complicated the challenge, he finds a way to make things work. \nHe is always eager to learn new technologies and share his findings with the team, whenever he discovers something that could spark an idea or prove useful to others. I had the pleasure of working with Ron during a bootcamp, where we spent five weeks building a Kanban board application together. It was a great experience, and I genuinely believe every team could use someone like Ron."
+                "quote": "Ron is a doer.\nWhile others figure out where to start, Ron exceeds expectations by getting things done. No matter how complicated the challenge, he finds a way.\nHe eagerly learns new technologies and shares findings with the team when something sparks an idea or helps others. During our bootcamp, we built a Kanban board application together over five weeks. It was a great experience, and every team could use someone like Ron."
             },
             {
-                "name": "Ron's Colleague",
-                "role": "Bootcamp Team Member | Developer",
-                "quote": "Ron is a doer. While others are still trying to figure out where to start, Ron exceeds expectations with his ability to get things done. No matter how complicated the challenge, he finds a way to make things work. He is always eager to learn new technologies and share his findings with the team whenever he discovers something that could spark an idea or prove useful to others. I had the pleasure of working with Ron during a bootcamp, where we spent five weeks building a Kanban board application together. It was a great experience, and I genuinely believe every team could use someone like Ron."
+                "name": "Michael Schmidt",
+                "role": "Software Engineer",
+                "quote": "Ron brings a rare blend of strong technical execution and genuine collaborative spirit. Whether he's diving into a difficult bug or exploring a new framework, his enthusiasm is contagious. Collaborating with him on our Kanban application showed me firsthand how much value he adds from day one."
             }
         ]
     },

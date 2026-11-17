@@ -33,7 +33,9 @@
     position: relative;
     width: 100%;
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     align-items: stretch;
+    touch-action: pan-y;
     min-height: 280px;
     overflow: hidden;
 }
@@ -123,7 +125,7 @@
     text-align: left;
     white-space: pre-line;
     text-wrap: pretty;
-    overflow-wrap: normal;
+    overflow-wrap: break-word;
     word-break: normal;
     hyphens: manual;
 }
@@ -147,7 +149,7 @@
 
 .review-card-author {
     margin: 0;
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     min-width: 0;
     max-width: 100%;
     color: #919191;
@@ -274,5 +276,7 @@
 
     .carousel-dots {
         gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

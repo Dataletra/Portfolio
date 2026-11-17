@@ -3,14 +3,19 @@
         <h2 class="heading">{{ i18n.t('colleagues.heading') }}</h2>
 
         <div class="carousel">
-            <div class="carousel-stage">
+            <div
+                class="carousel-stage"
+                (pointerdown)="onPointerDown($event)"
+                (pointerup)="onPointerUp($event)"
+                (pointercancel)="onPointerCancel()"
+            >
                 @for (review of reviews(); track $index; let i = $index) {
                     <article
                         class="review-card"
                         [class.review-card-active]="positionOf(i) === 'active'"
                         [class.review-card-prev]="positionOf(i) === 'prev'"
                         [class.review-card-next]="positionOf(i) === 'next'"
-                        (click)="goTo(i)"
+                        (click)="onCardClick(i)"
                     >
                         <p class="review-card-quote">{{ review.quote }}</p>
                         <div class="review-card-author-container">
