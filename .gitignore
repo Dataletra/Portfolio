@@ -44,3 +44,4 @@ __screenshots__/
 Thumbs.db
 
 /public/assets/images/AboutMeV2.png
+/src/app/components/legal-notice/legal-notice.html
