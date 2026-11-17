@@ -8,10 +8,15 @@ footer {
     height: 150px;
     background-color: #1c1c1c;
     padding-inline: calc((100% - 1440px) / 2);
+    color: white;
+
+    &.no-bg {
+        background-color: transparent;
+    }
+
     @media (max-width: 1440px) {
         padding-inline: 1.5rem;
     }
-    color: white;
 }
 .links {
     cursor: pointer;

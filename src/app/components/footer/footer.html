@@ -1,4 +1,4 @@
-<footer>
+<footer [class.no-bg]="isTransparentFooter()">
     <div class="footer-left">
         <a class="logo-container" (click)="scrollToSection('scroll-about-me')">
             <img class="logo default" src="/assets/images/RE_Hollow_Transparent.png" alt="Logo" />
@@ -12,9 +12,7 @@
         <a><p>Github</p></a>
         <a><p>LinkedIn</p></a>
         <a><p>Email</p></a>
-        <!-- <a href="/angular-projects/portfolio/legal-notice"><p>Legal Notice</p></a> -->
-        <a href="/legal-notice"><p>Legal Notice</p></a>
-        <a href="/privacy-policy"><p>Privacy policy</p></a>
-        <!-- TODO: REPLACE WITH /ANGULAR-PROJECTS/PORTFOLIO HREF WHEN DEPLOYING -->
+        <a routerLink="/legal-notice"><p>Legal Notice</p></a>
+        <a routerLink="/privacy-policy"><p>Privacy policy</p></a>
     </div>
 </footer>
