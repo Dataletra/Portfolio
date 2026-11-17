@@ -54,7 +54,7 @@
 }
 .biography-container {
     .bio-label {
-        //replace with font Karla
+        font-family: 'Karla';
         color: varia.$main-color;
         font-size: 24px;
     }
@@ -73,6 +73,13 @@
         margin: 0;
         color: varia.$main-color;
         font-size: 64px;
+    }
+    > p {
+        font-family: 'Karla';
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 26px;
     }
 }
 
@@ -96,6 +103,10 @@ button {
         cursor: pointer;
         border: 2px solid varia.$main-color-highlight;
     }
+}
+.bio {
+    font-family: 'Karla';
+    font-size: 20px;
 }
 @media (max-width: 1240px) {
     .wrapper {

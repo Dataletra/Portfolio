@@ -41,13 +41,19 @@
 .biography-container {
     margin-top: 150px;
     .bio-label {
-        //replace with font Karla
+        font-family: 'Karla';
         color: varia.$main-color;
         font-size: 24px;
+        font-weight: 500;
     }
 }
 
 .About-me-container {
+    > p {
+        font-family: 'Karla';
+        font-size: 20px;
+    }
+
     height: 560px;
     min-width: 560px;
     max-width: 560px;
@@ -62,6 +68,10 @@
         color: varia.$main-color;
         font-size: 64px;
     }
+}
+.topic-text {
+    font-family: 'Karla';
+    font-size: 20px;
 }
 .detail-text-container {
     display: flex;
@@ -141,7 +151,7 @@
     }
 
     .detail-text-container {
-        align-items: center;
+        align-items: flex-start;
         gap: 12px;
     }
 
@@ -150,7 +160,7 @@
     }
 
     .topic-text {
-        margin: 8px 0;
+        margin: 0px 5px 15px;
         overflow-wrap: anywhere;
     }
 }
