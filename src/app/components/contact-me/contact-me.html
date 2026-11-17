@@ -61,11 +61,25 @@
                 <input formControlName="policy" type="checkbox" class="checkbox-privacy-policy" name="policy" />
                 <p>
                     {{ i18n.t('contact.form.policyPrefix') }}
-                    <a href="/privacy-policy">{{ i18n.t('contact.form.policyLink') }}</a>
+                    <a routerLink="/privacy-policy">{{ i18n.t('contact.form.policyLink') }}</a>
                     {{ i18n.t('contact.form.policySuffix') }}
                 </p>
             </div>
-            <button type="submit" [disabled]="!contactform.valid">{{ i18n.t('contact.form.submitButton') }}</button>
+            <button type="submit" [disabled]="!contactform.valid || status === 'sending'">
+                {{ status === 'sending' ? 'Sending...' : i18n.t('contact.form.submitButton') }}
+            </button>
+            <div class="confirmation-container">
+                @if (status === 'success') {
+                    <div class="status-popup success-popup">
+                        <p>Your message has been sent successfully!</p>
+                    </div>
+                }
+                @if (status === 'error') {
+                    <div class="status-popup error-popup">
+                        <p>Failed to send message. Please try again later.</p>
+                    </div>
+                }
+            </div>
         </form>
     </div>
 </div>
