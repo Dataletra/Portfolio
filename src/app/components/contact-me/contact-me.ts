@@ -10,10 +10,11 @@ import {
 } from '@angular/forms';
 import { TranslationService } from '../../services/translation.service';
 import emailjs from 'emailjs-com';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-contact-me',
-    imports: [ReactiveFormsModule],
+    imports: [ReactiveFormsModule, RouterLink],
     templateUrl: './contact-me.html',
     changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './contact-me.scss',

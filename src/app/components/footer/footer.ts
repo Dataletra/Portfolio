@@ -2,6 +2,7 @@ import { Component, inject, computed, ChangeDetectionStrategy } from '@angular/c
 import { Router, NavigationEnd, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { filter, map, startWith } from 'rxjs';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
     selector: 'app-footer',
@@ -12,6 +13,7 @@ import { filter, map, startWith } from 'rxjs';
 })
 export class Footer {
     private router = inject(Router);
+    protected i18n = inject(TranslationService);
 
     private currentUrl = toSignal(
         this.router.events.pipe(
